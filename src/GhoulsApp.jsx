@@ -11,6 +11,7 @@ class GhoulsApp extends Component {
                 <Header />
                 <Router>
                     <Home exact path="/" styles="ghouls--1" />
+                    <Home path="/home" styles="ghouls--1" />
                     <Home path="/contrast" styles="ghouls--contrast" />
 					<Home path="/keyboard" styles="ghouls--keyboard" keyboard />
 					<Home path="/dark" styles="ghouls--dark" keyboard />

@@ -1,7 +1,9 @@
 import { FormattedMessage, injectIntl } from 'react-intl';
 import React, { Component } from 'react';
-import AccessibleSelector from './../../components/avatar/accessibleSelector';
-import AvatarSelector from './../../components/avatar/avatarSelector';
+import AccessibleSelector from '../../components/avatar/accessibleSelector';
+import AvatarSelector from '../../components/avatar/avatarSelector';
+import Footer from '../../components/footer/footer';
+import Header from '../../components/header/header';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { NOMINEE_DATA } from '../../data/nominees'

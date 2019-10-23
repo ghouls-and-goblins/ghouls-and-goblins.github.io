@@ -14,11 +14,12 @@ $footerBG: $black;
 $footerText: $lightGreen;
 $footerLink: $lightGreen;
 
-@import '../global-styles';
-@import '../../components/header/header';
-@import '../../components/footer/footer';
-@import '../../components/avatar/avatarSelector';
-@import '../../components/details/details';
+@import '../imports';
+
+body {
+	font-weight: normal;
+	font-size: 1;
+}
 
 a:focus {
 	// TODO

@@ -1,6 +1,6 @@
 body {
-  background-color: #EAEAEA;
-  color: #000000;
+  background-color: #F5F5F5;
+  color: #5E793D;
   font-family: "Arbutus Slab", serif; }
 
 .ghouls-content {
@@ -56,7 +56,7 @@ body {
     color: #FAFAFA; }
 
 .ghouls-header {
-  background-color: #666666;
+  background-color: #313F1F;
   border-bottom: 1px solid #282828;
   color: #B0E272;
   margin-bottom: 2em;
@@ -138,3 +138,18 @@ body {
 
 .ghoulsdetails {
   margin-bottom: 1em; }
+
+body {
+  font-weight: normal;
+  font-size: 1em; }
+
+h1 {
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 1.6em; }
+
+h2,
+h3 {
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 1.4em; }

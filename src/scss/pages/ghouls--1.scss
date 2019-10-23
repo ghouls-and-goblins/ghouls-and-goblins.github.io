@@ -1,0 +1,21 @@
+@import '../variables';
+
+$bodyBg: $green;
+$bodyText: $black;
+$bodyFont: $cursive;
+$linkColor: $black;
+$linkFocus: $black;
+
+$headerBG: $darkGreen;
+$headerText: $lightGreen;
+$headerLink: $lightGreen;
+
+$footerBG: $darkGrey;
+$footerText: $lightGreen;
+$footerLink: $lightGreen;
+
+@import '../global-styles';
+@import '../../components/header/header';
+@import '../../components/footer/footer';
+@import '../../components/avatar/avatarSelector';
+@import '../../components/details/details';

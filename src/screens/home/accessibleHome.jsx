@@ -1,9 +1,9 @@
 import { FormattedMessage, injectIntl } from 'react-intl';
 import React, { Component } from 'react';
-import AvatarSelector from './../../components/avatar/avatarSelector';
+import AccessibleSelector from './../../components/avatar/accessibleSelector';
 import { NOMINEE_DATA } from '../../data/nominees'
 
-class Home extends Component {
+class AccessibleHome extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -29,7 +29,7 @@ class Home extends Component {
                 { NOMINEE_DATA.map((monster, index) => {
                     const monsterId = monster.id;
 
-                    return <AvatarSelector
+                    return <AccessibleSelector
 						monster={ monster }
 						key={ `monster-${monsterId}` }
 						handleOnClick={ () => this.selectNominee(monsterId) } />;
@@ -96,4 +96,4 @@ class Home extends Component {
     }
 }
 
-export default injectIntl(Home);
+export default injectIntl(AccessibleHome);

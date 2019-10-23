@@ -12,9 +12,9 @@ class GhoulsApp extends Component {
                     <Home path="/contrast" styles="ghouls--contrast" />
 					<Home path="/keyboard" styles="ghouls--keyboard" keyboard />
 					<Home path="/inert" styles="ghouls--keyboard" keyboard inert />
-					<Home path="/dark" styles="ghouls--dark" keyboard />
-					<Home path="/high-contrast" styles="ghouls--high-contrast-dark" keyboard />
-                    <Home path="/high-contrast-light" styles="ghouls--high-contrast-light" keyboard />
+					<Home path="/dark" styles="ghouls--dark" keyboard inert />
+					<Home path="/high-contrast" styles="ghouls--high-contrast-dark" keyboard inert />
+                    <Home path="/high-contrast-light" styles="ghouls--high-contrast-light" keyboard inert />
                 </Router>
             </div>
         );

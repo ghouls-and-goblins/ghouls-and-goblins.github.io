@@ -99,24 +99,32 @@ class Home extends Component {
     }
 
     render() {
-		const { styles } = this.props;
+		const { location, styles } = this.props;
+		const motionQuery = (location.search && location.search.substr(1, 14));
 
         return (
 			<>
-	            <section className="ghouls-content">
+	            <main>
 					<Helmet defer={ false }>
 						<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
+						{ motionQuery === 'reduced-motion' && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--reduced-motion.css" /> }
 						{/* inert && (add inert plugin) */}
 					</Helmet>
+
 					<Header />
-					<div className="ghouls-selections">
-						{/* this.renderSelections() */}
-						{ this.renderButton() }
-					</div>
-					<h2 className="ghouls-heading"><FormattedMessage id="homeTitle" /></h2>
-	                { this.renderNominees() }
+
+					<section className="ghouls-content">
+						<div className="ghouls-selections">
+							{/* this.renderSelections() */}
+							{ this.renderButton() }
+						</div>
+
+						<h2 className="ghouls-heading"><FormattedMessage id="homeTitle" /></h2>
+		                { this.renderNominees() }
+					</section>
+
 					<Footer />
-	            </section>
+	            </main>
 				{/* this.renderLoginModal() */}
 			</>
         );
@@ -131,6 +139,7 @@ Home.defaultProps = {
 Home.propTypes = {
 	inert: PropTypes.bool,
 	keyboard: PropTypes.bool,
+	location: PropTypes.object.isRequired,
 	styles: PropTypes.string.isRequired
 };
 

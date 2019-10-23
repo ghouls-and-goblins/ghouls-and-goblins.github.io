@@ -1,5 +1,5 @@
 body {
-  background-color: #EAEAEA;
+  background-color: #E9E9E9;
   color: #000000;
   font-family: "Arbutus Slab", serif; }
 
@@ -138,3 +138,7 @@ body {
 
 .ghoulsdetails {
   margin-bottom: 1em; }
+
+body {
+  font-weight: normal;
+  font-size: 1; }

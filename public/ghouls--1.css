@@ -1,6 +1,6 @@
 body {
-  background-color: #5E793D;
-  color: #000000;
+  background-color: #E9E9E9;
+  color: #5E793D;
   font-family: "Amatic SC", cursive; }
 
 .ghouls-content {
@@ -71,9 +71,9 @@ body {
   font-size: 1em; }
 
 .ghouls-footer {
-  background-color: #666666;
+  background-color: #000000;
   bottom: 0;
-  color: #B0E272;
+  color: #5E793D;
   left: 0;
   margin-top: 2em;
   padding: 0.75em 0.375em;
@@ -82,7 +82,7 @@ body {
   text-align: center; }
 
 .ghouls-footer-link {
-  color: #B0E272;
+  color: #5E793D;
   transition: 0.35s ease color; }
   .ghouls-footer-link:hover, .ghouls-footer-link:focus {
     color: #FEC0C5; }
@@ -138,3 +138,7 @@ body {
 
 .ghoulsdetails {
   margin-bottom: 1em; }
+
+body {
+  font-weight: bold;
+  font-size: 1.3em; }

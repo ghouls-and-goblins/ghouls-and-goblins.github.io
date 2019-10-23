@@ -1,12 +1,12 @@
 @import '../variables';
 
-$bodyBg: $lightGrey;
-$bodyText: $black;
+$bodyBg: $lightGreyAccessible;
+$bodyText: $green;
 $bodyFont: $slab;
 $linkColor: $black;
 $linkFocus: $black;
 
-$headerBG: $darkGrey;
+$headerBG: $darkGreen;
 $headerText: $lightGreen;
 $headerLink: $lightGreen;
 
@@ -14,8 +14,22 @@ $footerBG: $black;
 $footerText: $lightGreen;
 $footerLink: $lightGreen;
 
-@import '../global-styles';
-@import '../../components/header/header';
-@import '../../components/footer/footer';
-@import '../../components/avatar/avatarSelector';
-@import '../../components/details/details';
+@import '../imports';
+
+body {
+	font-weight: normal;
+	font-size: 1em;
+}
+
+h1 {
+	font-family: $cursive;
+	font-weight: bold;
+	font-size: 1.6em;
+}
+
+h2,
+h3 {
+	font-family: $cursive;
+	font-weight: bold;
+	font-size: 1.4em;
+}

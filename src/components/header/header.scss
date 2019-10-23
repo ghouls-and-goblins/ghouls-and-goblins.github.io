@@ -1,0 +1,19 @@
+.ghouls-header {
+    background-color: $headerBG;
+    border-bottom: 1px solid #282828;
+    color: $headerText;
+    margin-bottom: 2em;
+    padding: 0.625em 0;
+
+    .ghouls-link {
+        color: $headerLink;
+    }
+}
+
+.ghouls-title {
+    font-size: 1.25em;
+}
+
+.ghouls-description {
+    font-size: 1em;
+}

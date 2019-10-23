@@ -1,0 +1,91 @@
+@import 'baseline';
+@import 'variables';
+
+$bodyBg: $green;
+$bodyText: $black;
+$linkColor: $black;
+$linkFocus: $black;
+
+$headerBG: $darkGreen;
+$headerText: $lightGreen;
+$headerLink: $lightGreen;
+
+$footerBG: $darkGrey;
+$footerText: $lightGreen;
+$footerLink: $lightGreen;
+
+@import '../components/header/header';
+@import '../components/footer/footer';
+@import '../components/avatar/avatarSelector';
+@import '../components/details/details';
+
+
+body {
+    background-color: $bodyBg;
+    color: $bodyText;
+}
+
+.ghouls-content {
+    display: block;
+    margin: 0 auto;
+    max-width: 90em;
+    padding: 0 1em;
+    width: 80%;
+}
+
+.ghouls-loading {
+    padding: 3.25em 0;
+    text-align: center;
+}
+
+.ghouls-link {
+    color: $linkColor;
+    transition: 0.35s ease color;
+
+    &:hover,
+    &:focus {
+        color: $linkFocus;
+    }
+}
+
+.ghouls-heading {
+    margin-bottom: 1em;
+}
+
+.ghouls-accessible-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.ghouls-button-row {
+    display: block;
+    margin: 3em 0 2em;
+    padding: 0;
+    width: 100%;
+}
+
+.ghouls-button {
+    background-color: #FAFAFA;
+    border: 2px solid #3C3C3C;
+    border-radius: 6px;
+    color: #1D1D1D;
+    cursor: pointer;
+    display: block;
+    font-size: 1.25em;
+    margin: 0 auto;
+    padding: 0.75em 1.25em;
+    transition: background 0.5s ease, color 0.5s ease;
+    width: auto;
+
+    &:hover,
+    &:focus {
+        background-color: #3C3C3C;
+        color: #FAFAFA;
+    }
+}

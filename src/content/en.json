@@ -1,0 +1,17 @@
+{
+    "appDescription": "Vote for your favorite ghouls, goblins, and monsters to enter the esteemed ranks Dr. Frankenstein's Ghouls and Goblins Hall of Fame!",
+    "appTitle": "Ghouls and Goblins Hall of Fame Fan Vote",
+
+    "emoji": "SCIENCE!",
+
+    "footerDescription": "Made with {emoji} by {link}",
+
+    "goBack": "Back",
+
+    "homeTitle": "Nominees",
+
+    "logIn": "Sign In to Vote",
+    "submitVotes": "Submit My Vote",
+
+    "theLab": "Dr. Frankenstein's Laboratory of Technology"
+}

@@ -1,0 +1,21 @@
+.ghouls-footer {
+    background-color: $footerBG;
+    bottom: 0;
+    color: $footerText;
+    left: 0;
+    margin-top: 2em;
+    padding: 0.75em 0.375em;
+    position: fixed;
+    right: 0;
+    text-align: center;
+}
+
+.ghouls-footer-link {
+    color: $footerLink;
+    transition: 0.35s ease color;
+
+    &:hover,
+    &:focus {
+        color: #FEC0C5;
+    }
+}

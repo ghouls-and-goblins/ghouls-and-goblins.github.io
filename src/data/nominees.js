@@ -6,6 +6,12 @@ const getRandomValue = () => {
 };
 
 export const NOMINEE_DATA = [
+	{ //to be used until images are added
+        id: 0,
+        image: `/assets/img/defaultSpooky.jpg`,
+        name: `Default Spooky`,
+		votes: getRandomValue()
+	},
     {
         id: 1,
         image: `/assets/img/frankenstein.jpg`,

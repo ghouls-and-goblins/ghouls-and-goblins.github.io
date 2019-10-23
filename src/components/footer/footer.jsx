@@ -8,13 +8,16 @@ class Footer extends Component {
 
     render() {
         return (
-            <footer className="ghouls-footer">
-                <p><FormattedMessage id="footerDescription" values={{
-                    emoji: <span role="img" aria-label={this.getEmojiText()}>🧟</span>,
-                    link: <a href="https://www.ryandudek.com" target="new" className="ghouls-footer-link">{ this.getNameText() }</a>
-                }} /></p>
-            </footer>
-        );
+			<>
+	            <footer className="ghouls-footer">
+	                <p><FormattedMessage id="footerDescription" values={{
+	                    emoji: <span role="img" aria-label={this.getEmojiText()}>🧟</span>,
+	                    link: <a href="https://www.ryandudek.com" target="new" className="ghouls-footer-link">{ this.getNameText() }</a>
+	                }} /></p>
+	            </footer>
+				<div className="grouls-castle-bg"></div>
+			</>
+		);
     }
 }
 

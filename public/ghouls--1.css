@@ -3,6 +3,17 @@ body {
   color: #5E793D;
   font-family: "Amatic SC", cursive; }
 
+.grouls-castle-bg {
+  background: #E9E9E9 url("/assets/img/castle.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 0.075;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1; }
+
 .ghouls-content {
   display: block;
   margin: 0 auto;

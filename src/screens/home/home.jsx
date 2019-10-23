@@ -1,124 +1,142 @@
-import { FormattedMessage, injectIntl } from 'react-intl';
-import React, { Component } from 'react';
-import AccessibleSelector from './../../components/avatar/accessibleSelector';
-import AvatarSelector from './../../components/avatar/avatarSelector';
-import { Helmet } from 'react-helmet';
-import PropTypes from 'prop-types';
-import { NOMINEE_DATA } from '../../data/nominees'
+import { FormattedMessage, injectIntl } from "react-intl";
+import React, { Component } from "react";
+import AccessibleSelector from "./../../components/avatar/accessibleSelector";
+import AvatarSelector from "./../../components/avatar/avatarSelector";
+import Footer from "./../../components/footer/footer";
+import Header from "./../../components/header/header";
+import { Helmet } from "react-helmet";
+import { NOMINEE_DATA } from "../../data/nominees";
+import PropTypes from "prop-types";
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            count: 0,
-            isAuthenticated: false,
-            selections: [],
-            loginModalVisible: false,
-            errorModalVisible: false
-        }
-    };
+	constructor(props) {
+		super(props);
+		this.state = {
+			count: 0,
+			isAuthenticated: false,
+			selections: [],
+			loginModalVisible: false,
+			errorModalVisible: false
+		};
+	}
 
-    selectNominee = (monsterId) => {
-        const { selections } = this.state;
+	selectNominee = monsterId => {
+		const { selections } = this.state;
 
-        this.setState({
-            selections: [...selections, monsterId]
-        });
-    }
+		this.setState({
+			selections: [...selections, monsterId]
+		});
+	};
 
-    renderNominees = () => {
+	renderNominees = () => {
 		const { keyboard } = this.props;
-        return (
-            <ul className="ghouls-nominee-list">
-                { NOMINEE_DATA.map((monster, index) => {
-                    const monsterId = monster.id;
+		return (
+			<ul className="ghouls-nominee-list">
+				{NOMINEE_DATA.map((monster, index) => {
+					const monsterId = monster.id;
 
 					if (keyboard) {
-						return <AccessibleSelector
-							monster={ monster }
-							key={ `monster-${monsterId}` }
-							handleOnClick={ () => this.selectNominee(monsterId) } />;
+						return (
+							<AccessibleSelector
+								monster={monster}
+								key={`monster-${monsterId}`}
+								handleOnClick={() =>
+									this.selectNominee(monsterId)
+								}
+							/>
+						);
 					}
 
-                    return <AvatarSelector
-						monster={ monster }
-						key={ `monster-${monsterId}` }
-						handleOnClick={ () => this.selectNominee(monsterId) } />;
-                }) }
-            </ul>
-        );
-    };
+					return (
+						<AvatarSelector
+							monster={monster}
+							key={`monster-${monsterId}`}
+							handleOnClick={() => this.selectNominee(monsterId)}
+						/>
+					);
+				})}
+			</ul>
+		);
+	};
 
-    getButtonText = () => {
-        const { isAuthenticated } = this.state;
+	getButtonText = () => {
+		const { isAuthenticated } = this.state;
 
-        if (isAuthenticated) {
-            return <FormattedMessage id="submitVotes" />;
-        }
+		if (isAuthenticated) {
+			return <FormattedMessage id="submitVotes" />;
+		}
 
-        return <FormattedMessage id="logIn" />;
-    }
+		return <FormattedMessage id="logIn" />;
+	};
 
-    openLogin = () => {
-        // TODO: Create login Modal
-        // const { modalVisible } = this.state;
-        //
-        // this.setState({ loginModalVisible: !loginModalVisible });
-        const { isAuthenticated } = this.state;
+	openLogin = () => {
+		// TODO: Create login Modal
+		// const { modalVisible } = this.state;
+		//
+		// this.setState({ loginModalVisible: !loginModalVisible });
+		const { isAuthenticated } = this.state;
 
-        this.setState({ isAuthenticated: !isAuthenticated });
-    }
+		this.setState({ isAuthenticated: !isAuthenticated });
+	};
 
-    submitData = () => {
-        const { selections, errorModalVisible } = this.state;
-        console.log(selections, errorModalVisible);
+	submitData = () => {
+		const { selections, errorModalVisible } = this.state;
+		console.log(selections, errorModalVisible);
 
-        // if (selections.length) {
-        //     return this.props.push('/results');
-        // }
-        //
-        // this.setState({ errorModalVisible: !errorModalVisible });
-    }
+		// if (selections.length) {
+		//     return this.props.push('/results');
+		// }
+		//
+		// this.setState({ errorModalVisible: !errorModalVisible });
+	};
 
-    renderButton = () => {
-        const { isAuthenticated } = this.state;
-        const buttonAction = isAuthenticated ? this.submitData : this.openLogin;
+	renderButton = () => {
+		const { isAuthenticated } = this.state;
+		const buttonAction = isAuthenticated ? this.submitData : this.openLogin;
 
-        return (
-            <div className="ghouls-button-row">
-                <button
-                    type="button"
-                    className="ghouls-button"
-                    onClick={ buttonAction }>
-                    { this.getButtonText() }
-                </button>
-            </div>
-        );
-    }
+		return (
+			<div className="ghouls-button-row">
+				<button
+					type="button"
+					className="ghouls-button"
+					onClick={buttonAction}
+				>
+					{this.getButtonText()}
+				</button>
+			</div>
+		);
+	};
 
-    render() {
+	render() {
 		const { styles } = this.props;
 
-        return (
+		return (
 			<>
-	            <section className="ghouls-content">
-					<Helmet defer={ false }>
-						<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
+				<section className="ghouls-content">
+					<Helmet defer={false}>
+						<link
+							rel="stylesheet"
+							type="text/css"
+							media="all"
+							href={`/${styles}.css`}
+						/>
 						{/* inert && (add inert plugin) */}
 					</Helmet>
 					<Header />
 					<div className="ghouls-selections">
 						{/* this.renderSelections() */}
-						{ this.renderButton() }
+						{this.renderButton()}
 					</div>
-					<h2 className="ghouls-heading"><FormattedMessage id="homeTitle" /></h2>
-	                { this.renderNominees() }
+					<h2 className="ghouls-heading">
+						<FormattedMessage id="homeTitle" />
+					</h2>
+					{this.renderNominees()}
 					<Footer />
-	            </section>
+				</section>
 				{/* this.renderLoginModal() */}
 			</>
-        );
-    }
+		);
+	}
 }
 
 Home.defaultProps = {

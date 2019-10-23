@@ -100,26 +100,34 @@ class Home extends Component {
 		const { styles } = this.props;
 
         return (
-            <section className="ghouls-content">
-				<Helmet defer={ false }>
-					<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
-				</Helmet>
-				<div className="ghouls-selections">
-					{/* this.renderSelections() */}
-					{ this.renderButton() }
-				</div>
-				<h2 className="ghouls-heading"><FormattedMessage id="homeTitle" /></h2>
-                { this.renderNominees() }
-            </section>
+			<>
+	            <section className="ghouls-content">
+					<Helmet defer={ false }>
+						<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
+						{/* inert && (add inert plugin) */}
+					</Helmet>
+					<Header />
+					<div className="ghouls-selections">
+						{/* this.renderSelections() */}
+						{ this.renderButton() }
+					</div>
+					<h2 className="ghouls-heading"><FormattedMessage id="homeTitle" /></h2>
+	                { this.renderNominees() }
+					<Footer />
+	            </section>
+				{/* this.renderLoginModal() */}
+			</>
         );
     }
 }
 
 Home.defaultProps = {
+	inert: false,
 	keyboard: false
 };
 
 Home.propTypes = {
+	inert: PropTypes.bool,
 	keyboard: PropTypes.bool,
 	styles: PropTypes.string.isRequired
 };

@@ -1,6 +1,6 @@
 body {
-  background-color: #EAEAEA;
-  color: #000000;
+  background-color: #F5F5F5;
+  color: #5E793D;
   font-family: "Arbutus Slab", serif; }
 
 .ghouls-content {
@@ -55,38 +55,6 @@ body {
     background-color: #3C3C3C;
     color: #FAFAFA; }
 
-.ghouls-header {
-  background-color: #666666;
-  border-bottom: 1px solid #282828;
-  color: #B0E272;
-  margin-bottom: 2em;
-  padding: 0.625em 0; }
-  .ghouls-header .ghouls-link {
-    color: #B0E272; }
-
-.ghouls-title {
-  font-size: 1.25em; }
-
-.ghouls-description {
-  font-size: 1em; }
-
-.ghouls-footer {
-  background-color: #000000;
-  bottom: 0;
-  color: #B0E272;
-  left: 0;
-  margin-top: 2em;
-  padding: 0.75em 0.375em;
-  position: fixed;
-  right: 0;
-  text-align: center; }
-
-.ghouls-footer-link {
-  color: #B0E272;
-  transition: 0.35s ease color; }
-  .ghouls-footer-link:hover, .ghouls-footer-link:focus {
-    color: #FEC0C5; }
-
 .ghouls-card {
   color: #1D1D1D;
   display: inline-block;
@@ -133,8 +101,49 @@ body {
     .ghouls-card:nth-child(4n+1) {
       margin-left: 0; } }
 
-.ghoulscategory {
-  font-weight: bold; }
+.ghouls-footer {
+  background-color: #000000;
+  bottom: 0;
+  color: #B0E272;
+  left: 0;
+  margin-top: 2em;
+  padding: 0.75em 0.375em;
+  position: fixed;
+  right: 0;
+  text-align: center; }
 
-.ghoulsdetails {
-  margin-bottom: 1em; }
+.ghouls-footer-link {
+  color: #B0E272;
+  transition: 0.35s ease color; }
+  .ghouls-footer-link:hover, .ghouls-footer-link:focus {
+    color: #FEC0C5; }
+
+.ghouls-header {
+  background-color: #313F1F;
+  border-bottom: 1px solid #282828;
+  color: #B0E272;
+  margin-bottom: 2em;
+  padding: 0.625em 0; }
+  .ghouls-header .ghouls-link {
+    color: #B0E272; }
+
+.ghouls-title {
+  font-size: 1.25em; }
+
+.ghouls-description {
+  font-size: 1em; }
+
+body {
+  font-weight: normal;
+  font-size: 1em; }
+
+h1 {
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 1.6em; }
+
+h2,
+h3 {
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 1.4em; }

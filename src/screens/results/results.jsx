@@ -1,61 +1,45 @@
 import { FormattedMessage, injectIntl } from 'react-intl';
 import React, { Component } from 'react';
-import Details from './../../components/details/details';
-import { Link } from '@reach/router';
-import axios from 'axios';
+import Footer from '../../components/footer/footer';
+import Header from '../../components/header/header';
+import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
+import { NOMINEE_DATA } from '../../data/nominees'
 
-class Starship extends Component {
-    constructor(props: {}) {
-        super(props);
-        this.state = {
-            isLoading: false,
-            starship: {}
-        }
-    };
-
-    componentDidMount() {
-        this.setState({ isLoading: true });
-
-        this.fetchData(`https://swapi.co/api${this.props.location.pathname}/`);
-    };
-
-    fetchData = (url) => {
-        axios.get(url)
-            .then(
-                (res) => {
-                    this.loadStarship(res.data);
-                },
-                (err) => {
-                    this.setState({
-                        errorMessage: true,
-                        isLoading: false
-                    });
-                }
-            );
-    }
-
-    loadStarship = (data) => {
-        this.setState({
-            isLoading: false,
-            starship: data
-        });
-    }
+class Results extends Component {
+	renderResults = () => {
+		console.log(NOMINEE_DATA);
+	}
 
     render() {
-        const { starship } = this.state;
+		const { location, styles } = this.props;
+		const motionQuery = (location.search && location.search.substr(1, 14));
 
         return (
-            <section className="ghouls-content">
-                <nav className="ghouls-breadcrumb">
-                    <Link to="/" className="ghouls-link">
-                        <FormattedMessage id="goBack" />
-                    </Link>
-                </nav>
+			<>
+				<main>
+					<Helmet defer={ false }>
+						<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
+						{ motionQuery === 'reduced-motion' && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--reduced-motion.css" /> }
+					</Helmet>
 
-                <Details content={ starship } />
-            </section>
+					<Header />
+
+					<section className="ghouls-content">
+						<h2 className="ghouls-heading"><FormattedMessage id="resultsTitle" /></h2>
+						{ this.renderResults() }
+					</section>
+
+					<Footer />
+	            </main>
+			</>
         );
     }
 }
 
-export default injectIntl(Starship);
+Results.propTypes = {
+	location: PropTypes.object.isRequired,
+	styles: PropTypes.string.isRequired
+};
+
+export default injectIntl(Results);

@@ -1,6 +1,9 @@
 import { FormattedMessage, injectIntl } from 'react-intl';
 import React, { Component } from 'react';
+import AccessibleSelector from './../../components/avatar/accessibleSelector';
 import AvatarSelector from './../../components/avatar/avatarSelector';
+import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
 import { NOMINEE_DATA } from '../../data/nominees'
 
 class Home extends Component {
@@ -24,10 +27,18 @@ class Home extends Component {
     }
 
     renderNominees = () => {
+		const { keyboard } = this.props;
         return (
             <ul className="ghouls-nominee-list">
                 { NOMINEE_DATA.map((monster, index) => {
                     const monsterId = monster.id;
+
+					if (keyboard) {
+						return <AccessibleSelector
+							monster={ monster }
+							key={ `monster-${monsterId}` }
+							handleOnClick={ () => this.selectNominee(monsterId) } />;
+					}
 
                     return <AvatarSelector
 						monster={ monster }
@@ -86,14 +97,31 @@ class Home extends Component {
     }
 
     render() {
+		const { styles } = this.props;
+
         return (
             <section className="ghouls-content">
-                <h2 className="ghouls-heading"><FormattedMessage id="homeTitle" /></h2>
+				<Helmet defer={ false }>
+					<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
+				</Helmet>
+				<div className="ghouls-selections">
+					{/* this.renderSelections() */}
+					{ this.renderButton() }
+				</div>
+				<h2 className="ghouls-heading"><FormattedMessage id="homeTitle" /></h2>
                 { this.renderNominees() }
-                { this.renderButton() }
             </section>
         );
     }
 }
+
+Home.defaultProps = {
+	keyboard: false
+};
+
+Home.propTypes = {
+	keyboard: PropTypes.bool,
+	styles: PropTypes.string.isRequired
+};
 
 export default injectIntl(Home);

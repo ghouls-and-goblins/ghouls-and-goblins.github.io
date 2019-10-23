@@ -15,7 +15,7 @@
         ]
     },
     "dependencies": {
-        "@babel/polyfill": "7.6.0",
+    	"@babel/polyfill": "7.6.0",
         "@reach/router": "1.2.1",
         "axios": "0.19.0",
         "classnames": "2.2.6",
@@ -24,6 +24,7 @@
         "prop-types": "15.7.2",
         "react": "16.10.2",
         "react-dom": "16.10.2",
+        "react-helmet": "5.2.1",
         "react-intl": "3.3.2",
         "react-scripts": "3.2.0"
     },
@@ -35,7 +36,7 @@
         "deploy": "gh-pages -b master -d build",
         "lint": "eslint . --ignore-path .gitignore",
         "pa11y": "node pa11y.js",
-        "scss": "node-sass -o public src/scss/ghouls--*.scss",
+        "scss": "concurrently \"node-sass -o public src/scss/pages/ghouls--1.scss\" \"node-sass -o public src/scss/pages/ghouls--contrast.scss\" \"node-sass -o public src/scss/pages/ghouls--dark.scss\" \"node-sass -o public src/scss/pages/ghouls--high-contrast-dark.scss\" \"node-sass -o public src/scss/pages/ghouls--high-contrast-light.scss\" \"node-sass -o public src/scss/pages/ghouls--keyboard.scss\"",
         "watch-css": "nodemon -e scss -x \"npm run scss\""
     },
     "devDependencies": {

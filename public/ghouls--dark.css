@@ -1,7 +1,7 @@
 body {
-  background-color: #5E793D;
+  background-color: #EAEAEA;
   color: #000000;
-  font-family: "Amatic SC", cursive; }
+  font-family: "Arbutus Slab", serif; }
 
 .ghouls-content {
   display: block;
@@ -56,7 +56,7 @@ body {
     color: #FAFAFA; }
 
 .ghouls-header {
-  background-color: #313F1F;
+  background-color: #666666;
   border-bottom: 1px solid #282828;
   color: #B0E272;
   margin-bottom: 2em;
@@ -71,7 +71,7 @@ body {
   font-size: 1em; }
 
 .ghouls-footer {
-  background-color: #666666;
+  background-color: #000000;
   bottom: 0;
   color: #B0E272;
   left: 0;

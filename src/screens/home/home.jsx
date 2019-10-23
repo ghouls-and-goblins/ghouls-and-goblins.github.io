@@ -99,16 +99,18 @@ class Home extends Component {
     }
 
     render() {
-		const { location, styles } = this.props;
+		const { errorModalVisible, loginModalVisible } = this.state;
+		const { inert, location, styles } = this.props;
 		const motionQuery = (location.search && location.search.substr(1, 14));
+		const modalVisible = errorModalVisible || loginModalVisible;
 
         return (
 			<>
-	            <main>
+				<main aria-hidden={ inert && modalVisible }>
 					<Helmet defer={ false }>
 						<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
 						{ motionQuery === 'reduced-motion' && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--reduced-motion.css" /> }
-						{/* inert && (add inert plugin) */}
+						{ inert && <script src="/inert-polyfill.min.js" /> }
 					</Helmet>
 
 					<Header />
@@ -125,7 +127,7 @@ class Home extends Component {
 
 					<Footer />
 	            </main>
-				{/* this.renderLoginModal() */}
+				{/* modalVisible && this.renderLoginModal() */}
 			</>
         );
     }

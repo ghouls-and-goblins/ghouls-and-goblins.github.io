@@ -1,19 +1,42 @@
+.ghouls-header-container {
+    margin-bottom: 2em;
+	margin-top: 60px;
+}
+
 .ghouls-header {
     background-color: $headerBG;
     border-bottom: 1px solid #282828;
     color: $headerText;
-    margin-bottom: 2em;
+	height: 100px;
     padding: 0.625em 0;
 
     .ghouls-link {
         color: $headerLink;
     }
+
+	.ghouls-content {
+		display: flex;
+	}
 }
 
-.ghouls-title {
-    font-size: 1.25em;
+.ghouls-link {
+	display: inline-block;
+	height: 145px;
+	margin-top: -45px;
+	width: auto;
+}
+
+
+.ghouls-logo {
+	display: block;
+	height: 145px;
+	max-width: none;
 }
 
 .ghouls-description {
-    font-size: 1em;
+	display: inline-block;
+	font-family: $cursive;
+	font-size: 3.375em;
+	font-weight: bold;
+	margin-left: 20px;
 }

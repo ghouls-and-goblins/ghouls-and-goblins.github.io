@@ -118,10 +118,16 @@ body {
   color: #5E793D;
   left: 0;
   margin-top: 2em;
-  padding: 0.75em 0.375em;
+  padding: 1em 0.375em;
   position: fixed;
   right: 0;
   text-align: center; }
+
+.ghouls-emoji {
+  display: inline-block;
+  font-size: 2.5em;
+  margin: 0 3px;
+  vertical-align: middle; }
 
 .ghouls-footer-link {
   color: #5E793D;
@@ -129,20 +135,38 @@ body {
   .ghouls-footer-link:hover, .ghouls-footer-link:focus {
     color: #FEC0C5; }
 
+.ghouls-header-container {
+  margin-bottom: 2em;
+  margin-top: 60px; }
+
 .ghouls-header {
   background-color: #313F1F;
   border-bottom: 1px solid #282828;
   color: #B0E272;
-  margin-bottom: 2em;
+  height: 100px;
   padding: 0.625em 0; }
   .ghouls-header .ghouls-link {
     color: #B0E272; }
+  .ghouls-header .ghouls-content {
+    display: flex; }
 
-.ghouls-title {
-  font-size: 1.25em; }
+.ghouls-link {
+  display: inline-block;
+  height: 145px;
+  margin-top: -45px;
+  width: auto; }
+
+.ghouls-logo {
+  display: block;
+  height: 145px;
+  max-width: none; }
 
 .ghouls-description {
-  font-size: 1em; }
+  display: inline-block;
+  font-family: "Amatic SC", cursive;
+  font-size: 3.375em;
+  font-weight: bold;
+  margin-left: 20px; }
 
 body {
   font-weight: bold;

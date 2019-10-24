@@ -52,6 +52,34 @@ body {
     margin-bottom: 1em;
 }
 
+.ghouls-section-header {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto 1.6em;
+	max-width: 54em;
+	width: 100%;
+
+	.ghouls-button {
+		margin-right: 0;
+		vertical-align: middle;
+	}
+}
+
+.ghouls-section-heading {
+	display: inline-block;
+	font-family: $bodyFont;
+	font-size: 2.2em;
+	margin-bottom: 0;
+	margin-right: auto;
+	vertical-align: middle;
+}
+
+.ghouls-section-description {
+	font-size: 1.4em;
+	margin-top: 1em;
+}
+
 .ghouls-accessible-text {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);

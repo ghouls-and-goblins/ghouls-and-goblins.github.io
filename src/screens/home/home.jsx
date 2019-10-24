@@ -112,14 +112,12 @@ class Home extends Component {
         const buttonAction = isAuthenticated ? this.submitData : this.toggleLoginModal;
 
         return (
-            <div className="ghouls-button-row">
-                <button
-                    type="button"
-                    className="ghouls-button"
-                    onClick={ buttonAction }>
-                    { this.getButtonText() }
-                </button>
-            </div>
+            <button
+                type="button"
+                className="ghouls-button"
+                onClick={ buttonAction }>
+                { this.getButtonText() }
+            </button>
         );
     }
 
@@ -149,7 +147,7 @@ class Home extends Component {
 
 	render() {
 		const { errorModalVisible, loginModalVisible, werewolfBarMitzVah } = this.state;
-		const { inert, location, styles, next } = this.props;
+		const { keyboard, inert, location, styles, next } = this.props;
 		const motionQuery = location.search && location.search.substr(1, 14);
 		const modalVisible = errorModalVisible || loginModalVisible || werewolfBarMitzVah;
 		const inertValue = inert ? modalVisible : false;
@@ -166,15 +164,36 @@ class Home extends Component {
 					<Header logoLink={next} />
 
 					<section className="ghouls-content ghouls-body-content">
-						<div className="ghouls-selections">
-							{/* this.renderSelections() */}
+						<header className="ghouls-section-header">
+							<h2 className="ghouls-heading ghouls-section-heading">
+								<FormattedMessage id="homeTitle" />
+							</h2>
 							{this.renderButton()}
+						</header>
+
+						<div className="ghouls-section-header">
+							<p className="ghouls-section-description">
+								<FormattedMessage id="homeDescription" values={{
+									nominees: <strong><FormattedMessage id="homeDescriptionNomineed" /></strong>
+								}} />
+							</p>
 						</div>
 
-						<h2 className="ghouls-heading">
-							<FormattedMessage id="homeTitle" />
-						</h2>
+						<div className="ghouls-section-header ghouls-selections">
+							{/* this.renderSelections() */}
+						</div>
+
+						<h3 className="ghouls-heading ghouls-accessible-text">
+							<FormattedMessage id="homeNominees" />
+						</h3>
+
 						{this.renderNominees()}
+
+						{ keyboard && (
+							<div className="ghouls-button-row">
+								{this.renderButton()}
+							</div>
+						) }
 					</section>
 
 					<Footer spookyScary={ this.werewolfBarMitzVah }  />

@@ -13,7 +13,13 @@
 
     "goBack": "Back",
 
-    "homeTitle": "Nominees",
+	"homeDescription": "Vote for your favorite ghouls and goblins to be inducted into our Hall of Fame! You can select up to {nominees} per user.",
+
+	"homeDescriptionNomineed": "3 Nominees",
+
+    "homeNominees": "Nominees",
+
+	"homeTitle": "Vote for your favorites!",
 
     "logIn": "Sign In to Vote",
 

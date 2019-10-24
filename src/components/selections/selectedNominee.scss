@@ -8,30 +8,51 @@
 }
 
 .ghoul-checkbox {
-	background-position: 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 10px solid $nomineeBorder;
+	border: 7.5px solid $transparent;
 	border-radius: 420px;
 	display: block;
-	filter: grayscale(100%) contrast(110%);
 	overflow: hidden;
 	position: relative;
+	transition: 0.15s ease-in-out border-color;
 	width: 100%;
 
 	&:before {
 		content: '';
 		display: block;
+		overflow: hidden;
 		padding-top: 100%;
 	}
 
 	&:hover,
 	.ghoul-selected &,
 	.ghoul-focused & {
-		border-color: $nomineeFocus;
-		filter: none;
+		border: 7.5px solid $nomineeFocus;
 		outline: none;
+
+		.ghoul-image {
+			filter: none;
+			height: 105%;
+			left: -2.5%;
+			top: -2.5%;
+			width: 105%;
+		}
 	}
+}
+
+.ghoul-image {
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 420px;
+	display: block;
+	height: 100%;
+	filter: grayscale(100%) contrast(150%);
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	transition: 0.35s ease-in-out all;
+	width: 100%;
 }
 
 .ghoul-checkbox-input {

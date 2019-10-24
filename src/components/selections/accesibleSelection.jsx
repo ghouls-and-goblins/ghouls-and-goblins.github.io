@@ -28,7 +28,7 @@ class AccessibleSelector extends Component {
 
 		return (
 			<div className={`${containerClass} ${this.state.focused && 'ghoul-focused'}`}>
-				<div className="ghoul-checkbox" style={{ backgroundImage: `url(${monster.image})` }}>
+				<div className="ghoul-checkbox">
 					<input
 						onFocus={handleFocus}
 						onBlur={handleBlur}
@@ -38,6 +38,7 @@ class AccessibleSelector extends Component {
 						id={monsterId}
 						onChange={handleOnClick}
 					/>
+					<div className='ghoul-image' style={{ backgroundImage: `url(${monster.image})` }}></div>
 				</div>
 				<label htmlFor={monsterId} className="ghoul-name">
 					{monster.name}

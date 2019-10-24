@@ -24,7 +24,7 @@ class Home extends Component {
 		};
 	}
 
-	selectNominee = (monsterId,e) => {
+	selectNominee = (monsterId) => {
 		const { selections, count } = this.state;
 
 		if (count >= 3) {

@@ -36,8 +36,9 @@
 
 .ghouls-link {
 	display: inline-block;
-	height: 145px;
-	margin-top: -45px;
+	height: 80px;
+	margin-left: -25px;
+	margin-top: 0;
 	position: relative;
 	width: auto;
 	z-index: 5;
@@ -47,10 +48,10 @@
 		content: 'G&G';
 		display: inline-block;
 		font-family: $cursive;
-		font-size: 46px;
+		font-size: 30px;
 		left: 50%;
 	    position: absolute;
-	    top: 42px;
+	    top: 22px;
 	    transform: translateX(-50%) rotate(-5deg);
 	}
 
@@ -69,15 +70,39 @@
 
 .ghouls-logo {
 	display: block;
-	height: 145px;
+	height: 80px;
 	max-width: none;
 }
 
 .ghouls-description {
 	display: inline-block;
 	font-family: $cursive;
-	font-size: 3.375em;
+	font-size: 2em;
 	font-weight: bold;
-	margin-left: 20px;
+	margin-left: 10px;
+	padding-top: 15px;
 	z-index: 5;
+}
+
+@media screen and (min-width: 33.75em) {
+	.ghouls-link {
+		margin-left: 0;
+		margin-top: -45px;
+
+		&:after {
+			font-size: 46px;
+		    top: 42px;
+		}
+	}
+
+	.ghouls-logo {
+		display: block;
+		height: 145px;
+		max-width: none;
+	}
+
+	.ghouls-description {
+		font-size: 3.375em;
+		padding-top: 0;
+	}
 }

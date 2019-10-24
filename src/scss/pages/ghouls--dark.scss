@@ -1,6 +1,6 @@
 @import '../variables';
 
-$bodyBg: $darkGreen;
+$bodyBg: darken($darkGreen, 7.5);
 $bodyText: $lightGrey;
 $bodyFont: $slab;
 $linkColor: $lightGreen;

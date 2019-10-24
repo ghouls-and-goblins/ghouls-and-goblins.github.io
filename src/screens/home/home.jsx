@@ -149,7 +149,7 @@ class Home extends Component {
 
 	render() {
 		const { errorModalVisible, loginModalVisible, werewolfBarMitzVah } = this.state;
-		const { keyboard, inert, location, styles } = this.props;
+		const { inert, location, styles } = this.props;
 		const motionQuery = location.search && location.search.substr(1, 14);
 		const modalVisible = errorModalVisible || loginModalVisible || werewolfBarMitzVah;
 		const inertValue = inert ? modalVisible : false;

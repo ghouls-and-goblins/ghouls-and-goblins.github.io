@@ -12,12 +12,13 @@ class SpookyScary extends Component {
 				<h1 className="ghouls-modal-heading"><FormattedMessage id="spookyScary" /></h1>
 				<div style={{ height: '315px' }}>
 					<iframe
+                        title="Werewolf Bar Mitz Vah music video"
 						width="560"
 						height="315"
 						src="https://www.youtube.com/embed/A6V2oCX3Hn4"
-						frameborder="0"
+						frameBorder="0"
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen>
+						allowFullScreen>
 					</iframe>
 				</div>
 			</Modal>

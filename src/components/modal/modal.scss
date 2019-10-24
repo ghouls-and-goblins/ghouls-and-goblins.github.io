@@ -36,3 +36,27 @@
 	width: 100%;
 	z-index: 20;
 }
+
+.ghouls-modal-close {
+	background: transparent;
+	border: 0;
+	display: block;
+	height: 45px;
+	overflow: hidden;
+	position: absolute;
+	right: 7.5px;
+	top: 15px;
+	width: 45px;
+
+	&:after {
+		content: 'X';
+		display: block;
+		font-family: $cursive;
+		font-size: 42px;
+		font-weight: bold;
+	}
+}
+
+.ghouls-modal-heading {
+	font-size: 2.4em;
+}

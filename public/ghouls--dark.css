@@ -78,6 +78,17 @@ body {
   padding: 0;
   text-align: center; }
 
+.ghouls-label {
+  display: block;
+  font-size: 1.2em;
+  margin: 0 0 6px; }
+
+.ghouls-input {
+  display: block;
+  font-size: 1em;
+  height: 42px;
+  width: 100%; }
+
 a:focus,
 button:focus,
 input:focus {
@@ -96,10 +107,15 @@ input:focus {
   z-index: 10; }
 
 .ghouls-emoji {
+  background: transparent;
+  border: 0;
   display: inline-block;
   font-size: 2.5em;
+  outline: none;
   margin: 0 3px;
   vertical-align: middle; }
+  .ghouls-emoji:focus {
+    outline: 2px solid #B0E272; }
 
 .ghouls-footer-link {
   color: #B0E272;
@@ -207,6 +223,26 @@ input:focus {
   transform: translate(-50%, -50%);
   width: 100%;
   z-index: 20; }
+
+.ghouls-modal-close {
+  background: transparent;
+  border: 0;
+  display: block;
+  height: 45px;
+  overflow: hidden;
+  position: absolute;
+  right: 7.5px;
+  top: 15px;
+  width: 45px; }
+  .ghouls-modal-close:after {
+    content: 'X';
+    display: block;
+    font-family: "Creepster", cursive;
+    font-size: 42px;
+    font-weight: bold; }
+
+.ghouls-modal-heading {
+  font-size: 2.4em; }
 
 .ghoul-selector {
   box-sizing: border-box;

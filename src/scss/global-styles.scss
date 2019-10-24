@@ -96,6 +96,19 @@ body {
 	text-align: center;
 }
 
+.ghouls-label {
+	display: block;
+	font-size: 1.2em;
+	margin: 0 0 6px;
+}
+
+.ghouls-input {
+	display: block;
+	font-size: 1em;
+	height: 42px;
+	width: 100%;
+}
+
 a:focus,
 button:focus,
 input:focus {

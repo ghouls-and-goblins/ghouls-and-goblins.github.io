@@ -9,7 +9,7 @@ class Login extends Component {
 
         return (
             <Modal handleClose={ handleClose } inert={ inert } id="ghouls-login-modal">
-				<h1 className="ghouls-heading"><FormattedMessage id="loginTitle" /></h1>
+				<h1 className="ghouls-modal-heading"><FormattedMessage id="loginTitle" /></h1>
 				<form>
 					<div className="ghouls-input-container">
 						<label htmlFor="ghouls-vote-login" className="ghouls-label"><FormattedMessage id="loginInput" /></label>

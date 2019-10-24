@@ -39,6 +39,7 @@ class Home extends Component {
 
 	renderNominees = () => {
 		const { keyboard } = this.props;
+		const { selections } = this.state;
 
 		return (
 			<ul className="ghouls-nominee-list">
@@ -50,6 +51,7 @@ class Home extends Component {
 							<AccessibleSelector
 								monster={monster}
 								key={`monster-${monsterId}`}
+								selected={selections.indexOf(monsterId) >= 0}
 								handleOnClick={() =>
 									this.selectNominee(monsterId)
 								}
@@ -61,6 +63,7 @@ class Home extends Component {
 						<Selector
 							monster={monster}
 							key={`monster-${monsterId}`}
+							selected={selections.indexOf(monsterId) >= 0}
 							handleOnClick={() =>
 								this.selectNominee(monsterId)
 							}

@@ -55,11 +55,13 @@
 	    transform: translateX(-50%) rotate(-5deg);
 	}
 
-	&:focus {
-		outline: 3px dashed $headerOutline;
+	&:focus,
+	&:hover {
+		filter: brightness(75%);
 
 		&:after {
-			color: $darkGreen;
+			color: $lightGreen;
+			filter: brightness(100%);
 		}
 	}
 }

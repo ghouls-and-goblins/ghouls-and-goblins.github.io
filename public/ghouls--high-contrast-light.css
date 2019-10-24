@@ -210,10 +210,11 @@ input:focus {
     position: absolute;
     top: 22px;
     transform: translateX(-50%) rotate(-5deg); }
-  .ghouls-link:focus {
-    outline: 3px dashed #313F1F; }
-    .ghouls-link:focus:after {
-      color: #313F1F; }
+  .ghouls-link:focus, .ghouls-link:hover {
+    filter: brightness(75%); }
+    .ghouls-link:focus:after, .ghouls-link:hover:after {
+      color: #B0E272;
+      filter: brightness(100%); }
 
 .ghouls-title {
   font-size: 2em; }

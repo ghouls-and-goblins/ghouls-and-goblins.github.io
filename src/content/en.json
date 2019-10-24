@@ -17,6 +17,12 @@
 
     "logIn": "Sign In to Vote",
 
+	"loginAction": "Sign In!",
+
+	"loginInput": "Email address",
+
+	"loginTitle": "Enter your email address to vote",
+
 	"resultsTitle": "Results",
 
     "submitVotes": "Submit My Vote",

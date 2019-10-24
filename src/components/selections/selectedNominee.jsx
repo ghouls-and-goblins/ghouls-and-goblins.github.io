@@ -8,14 +8,12 @@ class Selector extends Component {
 		const containerClass = `ghoul-selector ${selected && "ghoul-selected"}`;
 
 		return (
-			<div className={containerClass}>
+			<div className={containerClass} onClick={handleOnClick}>
 				<div className="ghoul-checkbox">
 					<div className='ghoul-checkbox-input ghoul-checkbox-no-hover' id={monsterId} onChange={handleOnClick}></div>
 					<div className='ghoul-image' style={{ backgroundImage: `url(${monster.image})` }}></div>
 				</div>
-				<p className="ghoul-name">
-					{monster.name}
-				</p>
+				<p className="ghoul-name">{monster.name}</p>
 			</div>
 		);
 	}

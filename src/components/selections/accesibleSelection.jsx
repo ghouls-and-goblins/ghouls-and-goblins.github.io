@@ -27,7 +27,7 @@ class AccessibleSelector extends Component {
 		};
 
 		return (
-			<div className={`${containerClass} ${this.state.focused && 'ghoul-focused'}`}>
+			<div className={`${containerClass} ${this.state.focused && 'ghoul-focused'}`} onClick={handleOnClick}>
 				<div className="ghoul-checkbox">
 					<input
 						onFocus={handleFocus}

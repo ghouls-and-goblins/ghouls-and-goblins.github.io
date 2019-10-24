@@ -1,0 +1,310 @@
+body {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: "Arbutus Slab", serif; }
+
+.grouls-castle-bg {
+  background: #FFFFFF url("/assets/img/castle.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 0.1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1; }
+
+.ghouls-main {
+  z-index: 10; }
+
+.ghouls-content {
+  display: block;
+  margin: 0 auto;
+  max-width: 90em;
+  padding: 0 1em;
+  width: 80%; }
+
+.ghouls-body-content {
+  padding-bottom: 130px;
+  z-index: 2; }
+
+.ghouls-loading {
+  padding: 3.25em 0;
+  text-align: center; }
+
+.ghouls-link {
+  color: #313F1F;
+  transition: 0.35s ease color; }
+  .ghouls-link:hover, .ghouls-link:focus {
+    color: #313F1F; }
+
+.ghouls-heading {
+  margin-bottom: 1em; }
+
+.ghouls-accessible-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.ghouls-button-row {
+  display: block;
+  margin: 3em 0 2em;
+  padding: 0;
+  width: 100%; }
+
+.ghouls-button {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  color: #000000;
+  cursor: pointer;
+  display: block;
+  font-size: 1.25em;
+  margin: 0 auto;
+  padding: 0.75em 1.25em;
+  transition: background 0.5s ease, color 0.5s ease;
+  width: auto; }
+  .ghouls-button:hover, .ghouls-button:focus {
+    background-color: #000000;
+    color: #FFFFFF; }
+
+.ghouls-nominee-list {
+  margin: 0 0 2em;
+  padding: 0;
+  text-align: center; }
+
+.ghouls-label {
+  display: block;
+  font-size: 1.2em;
+  margin: 0 0 6px; }
+
+.ghouls-input {
+  display: block;
+  font-size: 1em;
+  height: 42px;
+  width: 100%; }
+
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid #313F1F; }
+
+.ghouls-footer {
+  background-color: #000000;
+  bottom: 0;
+  color: #FFFFFF;
+  left: 0;
+  margin-top: 2em;
+  padding: 1em 0.375em;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  z-index: 10; }
+
+.ghouls-emoji {
+  background: transparent;
+  border: 0;
+  display: inline-block;
+  font-size: 2.5em;
+  outline: none;
+  margin: 0 3px;
+  vertical-align: middle; }
+  .ghouls-emoji:focus {
+    outline: 2px solid #313F1F; }
+
+.ghouls-footer-link {
+  color: #B0E272;
+  transition: 0.35s ease color; }
+  .ghouls-footer-link:hover, .ghouls-footer-link:focus {
+    color: #FFFFFF; }
+
+.ghouls-header-container {
+  margin-bottom: 2em;
+  margin-top: 60px; }
+
+.ghouls-header {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000000;
+  height: 100px;
+  padding: 0.625em 0;
+  position: relative;
+  z-index: 5; }
+  .ghouls-header:after {
+    background: url("/assets/img/overlay.png") repeat 50% 50%;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1; }
+  .ghouls-header .ghouls-link {
+    color: #313F1F; }
+  .ghouls-header .ghouls-content {
+    display: flex;
+    z-index: 5; }
+
+.ghouls-link {
+  display: inline-block;
+  height: 145px;
+  margin-top: -45px;
+  position: relative;
+  width: auto;
+  z-index: 5; }
+  .ghouls-link:after {
+    color: #000000;
+    content: 'G&G';
+    display: inline-block;
+    font-family: "Creepster", cursive;
+    font-size: 46px;
+    left: 50%;
+    position: absolute;
+    top: 42px;
+    transform: translateX(-50%) rotate(-5deg); }
+  .ghouls-link:focus {
+    outline: 3px dashed #313F1F; }
+    .ghouls-link:focus:after {
+      color: #313F1F; }
+
+.ghouls-title {
+  font-size: 2em; }
+
+.ghouls-logo {
+  display: block;
+  height: 145px;
+  max-width: none; }
+
+.ghouls-description {
+  display: inline-block;
+  font-family: "Creepster", cursive;
+  font-size: 3.375em;
+  font-weight: bold;
+  margin-left: 20px;
+  z-index: 5; }
+
+.ghouls-modal-hidden {
+  opacity: 0;
+  visibility: hidden; }
+
+.ghouls-modal-visible {
+  opacity: 1;
+  visibility: visible; }
+
+.ghouls-modal-bg {
+  background-color: rgba(255, 255, 255, 0.6);
+  bottom: 0;
+  font-size: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  text-indent: -400px;
+  top: -20px;
+  z-index: 15; }
+
+.ghouls-modal {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  left: 50%;
+  max-height: 90vh;
+  max-width: 40em;
+  overflow-x: hidden;
+  padding: 1em;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 20; }
+
+.ghouls-modal-close {
+  background: transparent;
+  border: 0;
+  display: block;
+  height: 45px;
+  overflow: hidden;
+  position: absolute;
+  right: 7.5px;
+  top: 15px;
+  width: 45px; }
+  .ghouls-modal-close:after {
+    content: 'X';
+    display: block;
+    font-family: "Creepster", cursive;
+    font-size: 42px;
+    font-weight: bold; }
+
+.ghouls-modal-heading {
+  font-size: 2.4em; }
+
+.ghoul-selector {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 auto 1em;
+  padding: 0 1em;
+  width: 50%;
+  vertical-align: top; }
+
+.ghoul-checkbox {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 10px solid #FFFFFF;
+  border-radius: 420px;
+  display: block;
+  filter: grayscale(100%) contrast(110%);
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+  .ghoul-checkbox:before {
+    content: '';
+    display: block;
+    padding-top: 100%; }
+  .ghoul-checkbox:hover,
+  .ghoul-selected .ghoul-checkbox,
+  .ghoul-focused .ghoul-checkbox {
+    border-color: #B0E272;
+    filter: none;
+    outline: none; }
+
+.ghoul-checkbox-input {
+  left: -100px;
+  position: absolute; }
+
+.ghoul-name {
+  font-size: 1.2em;
+  margin-top: 10px; }
+
+@media screen and (min-width: 37.5em) {
+  .ghoul-selector {
+    width: 33.3%; } }
+
+@media screen and (min-width: 64em) {
+  .ghoul-selector {
+    width: 25%; } }
+
+@media screen and (min-width: 76.25em) {
+  .ghoul-selector {
+    width: 20%; } }
+
+body {
+  font-weight: normal;
+  font-size: 1em; }
+
+h1 {
+  font-family: "Creepster", cursive;
+  font-weight: bold;
+  font-size: 1.6em; }
+
+h2,
+h3 {
+  font-family: "Creepster", cursive;
+  font-weight: bold;
+  font-size: 1.4em; }

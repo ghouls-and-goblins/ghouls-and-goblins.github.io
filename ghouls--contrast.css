@@ -74,7 +74,7 @@ body {
     color: #F5F5F5; }
 
 .ghouls-nominee-list {
-  margin: 0 0 2em;
+  margin: 0 -40px 2em;
   padding: 0;
   text-align: center; }
 
@@ -93,6 +93,11 @@ a:focus,
 button:focus,
 input:focus {
   outline: 2px solid transparent; }
+
+@media screen and (min-width: 33.75em) {
+  .ghouls-nominee-list {
+    margin-left: 0;
+    margin-right: 0; } }
 
 .ghouls-footer {
   background-color: #000000;
@@ -158,8 +163,9 @@ input:focus {
 
 .ghouls-link {
   display: inline-block;
-  height: 145px;
-  margin-top: -45px;
+  height: 80px;
+  margin-left: -25px;
+  margin-top: 0;
   position: relative;
   width: auto;
   z-index: 5; }
@@ -168,10 +174,10 @@ input:focus {
     content: 'G&G';
     display: inline-block;
     font-family: "Creepster", cursive;
-    font-size: 46px;
+    font-size: 30px;
     left: 50%;
     position: absolute;
-    top: 42px;
+    top: 22px;
     transform: translateX(-50%) rotate(-5deg); }
   .ghouls-link:focus {
     outline: 3px dashed transparent; }
@@ -183,16 +189,32 @@ input:focus {
 
 .ghouls-logo {
   display: block;
-  height: 145px;
+  height: 80px;
   max-width: none; }
 
 .ghouls-description {
   display: inline-block;
   font-family: "Creepster", cursive;
-  font-size: 3.375em;
+  font-size: 2em;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 10px;
+  padding-top: 15px;
   z-index: 5; }
+
+@media screen and (min-width: 33.75em) {
+  .ghouls-link {
+    margin-left: 0;
+    margin-top: -45px; }
+    .ghouls-link:after {
+      font-size: 46px;
+      top: 42px; }
+  .ghouls-logo {
+    display: block;
+    height: 145px;
+    max-width: none; }
+  .ghouls-description {
+    font-size: 3.375em;
+    padding-top: 0; } }
 
 .ghouls-modal-hidden {
   opacity: 0;

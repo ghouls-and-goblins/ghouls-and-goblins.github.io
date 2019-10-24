@@ -7,7 +7,7 @@
 
 	"closeModal": "Go Back",
 
-    "emoji": "Click for something Spooky Scary!",
+    "emoji": "science",
 
     "footerDescription": "Made with {emoji} by {link}",
 
@@ -25,7 +25,9 @@
 
 	"resultsTitle": "Results",
 
-	"spookyScary": "Spooky Scary!",
+    "spookyScary": "Spooky Scary!",
+
+    "spookySecret": "Click for something Spooky Scary!",
 
     "submitVotes": "Submit My Vote",
 

@@ -25,3 +25,8 @@ $footerLinkHover: $white;
 
 @import '../imports';
 @import '../features/contrast';
+
+.ghouls-secret-trigger:focus {
+    left: 50%;
+    transform: translateX(-50%);
+}

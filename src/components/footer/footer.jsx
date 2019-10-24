@@ -5,18 +5,20 @@ import PropTypes from 'prop-types';
 class Footer extends Component {
     getEmojiText = () => {
 		const { spookyScary } = this.props;
+        const spookyContent = <FormattedMessage id="emoji" />;
 
 		return (
-			<button type="button" className="ghouls-emoji" onClick={ spookyScary }>
+			<span role="img" className="ghouls-emoji" onClick={ spookyScary } aria-label={ spookyContent }>
 				🧟
-				<span className="ghouls-accessible-text"><FormattedMessage id="emoji" /></span>
-			</button>
+			</span>
 		);
 	};
 
     getNameText = () => <FormattedMessage id="theLab" />;
 
     render() {
+        const { spookyScary } = this.props;
+
         return (
 			<>
 	            <footer className="ghouls-footer">
@@ -24,6 +26,10 @@ class Footer extends Component {
 	                    emoji: this.getEmojiText(),
 	                    link: <a href="https://www.ryandudek.com" target="new" className="ghouls-footer-link">{ this.getNameText() }</a>
 	                }} /></p>
+
+        			<button type="button" className="ghouls-button ghouls-secret-trigger" onClick={ spookyScary }>
+        				<FormattedMessage id="spookySecret" />
+        			</button>
 	            </footer>
 				<div className="grouls-castle-bg"></div>
 			</>

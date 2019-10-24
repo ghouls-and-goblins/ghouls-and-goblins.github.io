@@ -1,0 +1,26 @@
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+	    --bodyBg: #1D2512;
+		--bodyText: #E9E9E9;
+		--bodyFont: 'Arbutus Slab', serif;
+		--linkColor: #B0E272;
+		--linkFocus: #FFFFFF;
+
+		--focusColor: #B0E272;
+		--focusOutline: #B0E272;
+		--headerOutline: #B0E272;
+		--footerOutline: #B0E272;
+
+		--headerBG: rgba(0, 0, 0, 0.25);
+		--headerText: #B0E272;
+		--headerLink: #B0E272;
+
+		--nomineeBorder: #1D2512;
+		--nomineeFocus: #B0E272;
+
+		--footerBG: #000000;
+		--footerText: #B0E272;
+		--footerLink: #B0E272;
+		--footerLinkHover: #FFFFFF;
+	}
+}

@@ -3,7 +3,7 @@ body {
   color: #FFFFFF;
   font-family: "Arbutus Slab", serif; }
 
-.grouls-castle-bg {
+.ghouls-castle-bg {
   background: #000000 url("/assets/img/castle.jpg") no-repeat 50% 50%;
   background-size: cover;
   bottom: 0;
@@ -137,10 +137,30 @@ input:focus {
   left: 0;
   margin-top: 2em;
   padding: 1em 0.375em;
-  position: fixed;
+  position: relative;
   right: 0;
   text-align: center;
   z-index: 10; }
+  .ghouls-footer:after {
+    background-color: #000000;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1; }
+  .ghouls-footer:before {
+    background: url("/assets/img/hand.png") no-repeat 50% 50%;
+    background-size: contain;
+    bottom: 80px;
+    content: '';
+    display: block;
+    height: 90px;
+    filter: brightness(10%);
+    left: 7.5%;
+    position: absolute;
+    width: 90px; }
 
 .ghouls-emoji {
   background: transparent;
@@ -312,26 +332,46 @@ input:focus {
   vertical-align: top; }
 
 .ghoul-checkbox {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 10px solid #000000;
+  border: 7.5px solid transparent;
   border-radius: 420px;
   display: block;
-  filter: grayscale(100%) contrast(110%);
   overflow: hidden;
   position: relative;
+  transition: 0.15s ease-in-out border-color;
   width: 100%; }
   .ghoul-checkbox:before {
     content: '';
     display: block;
+    overflow: hidden;
     padding-top: 100%; }
   .ghoul-checkbox:hover,
   .ghoul-selected .ghoul-checkbox,
   .ghoul-focused .ghoul-checkbox {
-    border-color: #B0E272;
-    filter: none;
+    border: 7.5px solid #B0E272;
     outline: none; }
+    .ghoul-checkbox:hover .ghoul-image,
+    .ghoul-selected .ghoul-checkbox .ghoul-image,
+    .ghoul-focused .ghoul-checkbox .ghoul-image {
+      filter: none;
+      height: 105%;
+      left: -2.5%;
+      top: -2.5%;
+      width: 105%; }
+
+.ghoul-image {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 420px;
+  display: block;
+  height: 100%;
+  filter: grayscale(100%) contrast(150%);
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: 0.35s ease-in-out all;
+  width: 100%; }
 
 .ghoul-checkbox-input {
   left: -100px;

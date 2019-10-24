@@ -1,0 +1,51 @@
+:root {
+    --bodyBg: #F5F5F5;
+	--bodyText: #5E793D;
+	--bodyFont: 'Arbutus Slab', serif;
+	--linkColor: #5E793D;
+	--linkFocus: #B0E272;
+
+	--focusColor: #B0E272;
+	--focusOutline: #B0E272;
+	--headerOutline: #313F1F;
+	--footerOutline: #B0E272;
+
+	--headerBG: rgba(49, 63, 31, 0.8);
+	--headerText: #B0E272;
+	--headerLink: #B0E272;
+
+	--nomineeBorder: #F5F5F5;
+	--nomineeFocus: #B0E272;
+
+	--footerBG: #000000;
+	--footerText: #B0E272;
+	--footerLink: #B0E272;
+	--footerLinkHover: #FFFFFF;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root {
+		--bodyBg: #F5F5F5;
+		--bodyText: #5E793D;
+		--bodyFont: 'Arbutus Slab', serif;
+		--linkColor: #5E793D;
+		--linkFocus: #B0E272;
+
+		--headerBG: rgba(49, 63, 31, 0.8);
+		--headerText: #B0E272;
+		--headerLink: #B0E272;
+
+		--focusColor: #B0E272;
+		--focusOutline: #B0E272;
+		--headerOutline: #313F1F;
+		--footerOutline: #B0E272;
+
+		--nomineeBorder: #F5F5F5;
+		--nomineeFocus: #B0E272;
+
+		--footerBG: #000000;
+		--footerText: #B0E272;
+		--footerLink: #B0E272;
+		--footerLinkHover: #FFFFFF;
+    }
+}

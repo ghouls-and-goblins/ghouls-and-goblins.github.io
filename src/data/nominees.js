@@ -21,7 +21,7 @@ export const NOMINEE_DATA = [
     {
         id: 3,
         image: `/assets/img/chucky.jpg`,
-        name: `Chucky`,
+        name: `Charles Lee Ray`,
 		votes: getRandomValue()
     },
     {

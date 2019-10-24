@@ -9,8 +9,9 @@ class Selector extends Component {
 
 		return (
 			<div className={containerClass}>
-				<div className="ghoul-checkbox" style={{ backgroundImage: `url(${monster.image})` }}>
+				<div className="ghoul-checkbox">
 					<div className='ghoul-checkbox-input ghoul-checkbox-no-hover' id={monsterId} onChange={handleOnClick}></div>
+					<div className='ghoul-image' style={{ backgroundImage: `url(${monster.image})` }}></div>
 				</div>
 				<p className="ghoul-name">
 					{monster.name}

@@ -74,7 +74,7 @@ body {
     color: #313F1F; }
 
 .ghouls-nominee-list {
-  margin: 0 0 2em;
+  margin: 0 -40px 2em;
   padding: 0;
   text-align: center; }
 
@@ -93,6 +93,11 @@ a:focus,
 button:focus,
 input:focus {
   outline: 2px solid #B0E272; }
+
+@media screen and (min-width: 33.75em) {
+  .ghouls-nominee-list {
+    margin-left: 0;
+    margin-right: 0; } }
 
 .ghouls-footer {
   background-color: #000000;

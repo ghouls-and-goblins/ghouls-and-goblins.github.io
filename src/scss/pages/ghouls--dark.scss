@@ -5,7 +5,11 @@ $bodyText: $lightGrey;
 $bodyFont: $slab;
 $linkColor: $lightGreen;
 $linkFocus: $black;
-$focusColor: $green;
+
+$focusColor: $lightGreen;
+$focusOutline: $lightGreen;
+$headerOutline: $lightGreen;
+$footerOutline: $lightGreen;
 
 $nomineeBorder: $bodyBg;
 $nomineeFocus: $lightGreen;
@@ -21,4 +25,3 @@ $footerLinkHover: $white;
 
 @import '../imports';
 @import '../features/contrast';
-@import '../features/focus';

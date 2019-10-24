@@ -5,7 +5,11 @@ $bodyText: $white;
 $bodyFont: $slab;
 $linkColor: $lightGreen;
 $linkFocus: $white;
+
 $focusColor: $lightGreen;
+$focusOutline: $lightGreen;
+$headerOutline: $lightGreen;
+$footerOutline: $lightGreen;
 
 $nomineeBorder: $bodyBg;
 $nomineeFocus: $lightGreen;
@@ -21,8 +25,3 @@ $footerLinkHover: $white;
 
 @import '../imports';
 @import '../features/contrast';
-@import '../features/focus';
-
-a:focus {
-	// TODO
-}

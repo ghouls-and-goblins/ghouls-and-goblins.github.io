@@ -143,7 +143,7 @@ input:focus {
   width: auto;
   z-index: 5; }
   .ghouls-link:after {
-    color: black;
+    color: #000000;
     content: 'G&G';
     display: inline-block;
     font-family: "Creepster", cursive;
@@ -152,6 +152,10 @@ input:focus {
     position: absolute;
     top: 42px;
     transform: translateX(-50%) rotate(-5deg); }
+  .ghouls-link:focus {
+    outline: 3px dashed transparent; }
+    .ghouls-link:focus:after {
+      color: #313F1F; }
 
 .ghouls-title {
   font-size: 2em; }
@@ -253,9 +257,6 @@ input:focus {
 @media screen and (min-width: 76.25em) {
   .ghoul-selector {
     width: 20%; } }
-
-.ghoul-focused {
-  outline: 1px solid #B0E272; }
 
 body {
   font-weight: normal;

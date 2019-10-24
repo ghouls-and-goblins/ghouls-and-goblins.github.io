@@ -147,7 +147,6 @@ class Home extends Component {
 				<Helmet defer={ false }>
 					<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
 					{ motionQuery === 'reduced-motion' && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--reduced-motion.css" /> }
-					{ keyboard && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--keyboard.css" /> }
 					{ inert && <script src="/inert-polyfill.min.js" /> }
 				</Helmet>
 

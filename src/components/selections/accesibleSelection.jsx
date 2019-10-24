@@ -25,13 +25,15 @@ class AccessibleSelector extends Component {
 				focused: false
 			});
 		};
+
 		return (
 			<div className={`${containerClass} ${this.state.focused && 'ghoul-focused'}`}>
-				<div className="ghoul-checkbox">
+				<div className="ghoul-checkbox" style={{ backgroundImage: `url(${monster.image})` }}>
 					<input
 						onFocus={handleFocus}
 						onBlur={handleBlur}
 						type="checkbox"
+						className="ghoul-checkbox-input"
 						name={monsterId}
 						id={monsterId}
 						onChange={handleOnClick}

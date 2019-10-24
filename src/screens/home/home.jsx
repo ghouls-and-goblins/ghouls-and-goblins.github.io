@@ -1,7 +1,6 @@
 import { FormattedMessage, injectIntl } from 'react-intl';
 import React, { Component } from 'react';
 import AccessibleSelector from "../../components/selections/accesibleSelection";
-import AvatarSelector from '../../components/avatar/avatarSelector';
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import { Helmet } from 'react-helmet';
@@ -24,17 +23,16 @@ class Home extends Component {
 	}
 
 	selectNominee = (monsterId,e) => {
-		let { selections, count } = this.state;
+		const { selections, count } = this.state;
 
 		if (count >= 3) {
 			return;
 		}
-		else {
-			count += 1;
-			this.setState({
-				selections: [...selections, monsterId]
-			});
-		}
+
+		this.setState({
+			count: count + 1,
+			selections: [...selections, monsterId]
+		});
 	};
 
 	renderNominees = () => {
@@ -152,23 +150,6 @@ class Home extends Component {
 					{ keyboard && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--keyboard.css" /> }
 					{ inert && <script src="/inert-polyfill.min.js" /> }
 				</Helmet>
-				{/*<Helmet defer={false}>
-					<link
-						rel="stylesheet"
-						type="text/css"
-						media="all"
-						href={`/${styles}.css`}
-					/>
-					{motionQuery === "reduced-motion" && (
-						<link
-							rel="stylesheet"
-							type="text/css"
-							media="all"
-							href="/ghouls--reduced-motion.css"
-						/>
-					)}
-					{inert && <script src="/inert-polyfill.min.js" />}
-				</Helmet>*/}
 
 				<main ref={(node) => setRef(node, inertValue)} className="ghouls-main" id="ghouls-main">
 					<Header />

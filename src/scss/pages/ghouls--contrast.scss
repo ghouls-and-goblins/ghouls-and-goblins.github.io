@@ -3,9 +3,12 @@
 $bodyBg: $lightGreyAccessible;
 $bodyText: $green;
 $bodyFont: $slab;
-$linkColor: $black;
-$linkFocus: $black;
+$linkColor: $green;
+$linkFocus: $lightGreen;
 $focusColor: $transparent;
+
+$nomineeBorder: $bodyBg;
+$nomineeFocus: $lightGreen;
 
 $headerBG: rgba($darkGreen, 0.8);
 $headerText: $lightGreen;

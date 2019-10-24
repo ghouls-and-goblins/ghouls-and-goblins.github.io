@@ -5,8 +5,10 @@ import AvatarSelector from '../../components/avatar/avatarSelector';
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import { Helmet } from 'react-helmet';
+import LoginModal from '../../components/modal/loginModal';
 import PropTypes from 'prop-types';
-import { NOMINEE_DATA } from '../../data/nominees'
+import { NOMINEE_DATA } from '../../data/nominees';
+import { setRef } from '../../utils/setRef';
 
 class Home extends Component {
     constructor(props) {
@@ -61,15 +63,20 @@ class Home extends Component {
         return <FormattedMessage id="logIn" />;
     }
 
-    openLogin = () => {
-        // TODO: Create login Modal
-        // const { modalVisible } = this.state;
-        //
-        // this.setState({ loginModalVisible: !loginModalVisible });
+    toggleLoginModal = () => {
+        const { loginModalVisible } = this.state;
+
+        this.setState({ loginModalVisible: !loginModalVisible });
+    }
+
+	handleLogin = () => {
         const { isAuthenticated } = this.state;
 
-        this.setState({ isAuthenticated: !isAuthenticated });
-    }
+		this.setState({
+			isAuthenticated: !isAuthenticated,
+			loginModalVisible: false
+		});
+	}
 
     submitData = () => {
         const { selections, errorModalVisible } = this.state;
@@ -84,7 +91,7 @@ class Home extends Component {
 
     renderButton = () => {
         const { isAuthenticated } = this.state;
-        const buttonAction = isAuthenticated ? this.submitData : this.openLogin;
+        const buttonAction = isAuthenticated ? this.submitData : this.toggleLoginModal;
 
         return (
             <div className="ghouls-button-row">
@@ -98,21 +105,36 @@ class Home extends Component {
         );
     }
 
+	renderModal = () => {
+		const { errorModalVisible } = this.state;
+
+		if (errorModalVisible) {
+			console.log('there is an error');
+
+			return;
+		}
+
+		return (
+			<LoginModal handleClose={ this.toggleLoginModal } handleLogin={ this.handleLogin } />
+		);
+	}
+
     render() {
 		const { errorModalVisible, loginModalVisible } = this.state;
 		const { inert, location, styles } = this.props;
 		const motionQuery = (location.search && location.search.substr(1, 14));
 		const modalVisible = errorModalVisible || loginModalVisible;
+		const inertValue = inert ? modalVisible : false;
 
         return (
 			<>
-				<main aria-hidden={ inert && modalVisible } className="ghouls-main">
-					<Helmet defer={ false }>
-						<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
-						{ motionQuery === 'reduced-motion' && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--reduced-motion.css" /> }
-						{ inert && <script src="/inert-polyfill.min.js" /> }
-					</Helmet>
+				<Helmet defer={ false }>
+					<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
+					{ motionQuery === 'reduced-motion' && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--reduced-motion.css" /> }
+					{ inert && <script src="/inert-polyfill.min.js" /> }
+				</Helmet>
 
+				<main ref={(node) => setRef(node, inertValue)} className="ghouls-main" id="ghouls-main">
 					<Header />
 
 					<section className="ghouls-content ghouls-body-content">
@@ -127,7 +149,7 @@ class Home extends Component {
 
 					<Footer />
 	            </main>
-				{/* modalVisible && this.renderLoginModal() */}
+				{ modalVisible && this.renderModal() }
 			</>
         );
     }

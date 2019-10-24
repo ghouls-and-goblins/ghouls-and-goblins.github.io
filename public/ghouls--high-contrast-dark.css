@@ -25,6 +25,7 @@ body {
   width: 80%; }
 
 .ghouls-body-content {
+  padding-bottom: 130px;
   z-index: 2; }
 
 .ghouls-loading {
@@ -199,6 +200,41 @@ body {
   font-weight: bold;
   margin-left: 20px;
   z-index: 5; }
+
+.ghouls-modal-hidden {
+  opacity: 0;
+  visibility: hidden; }
+
+.ghouls-modal-visible {
+  opacity: 1;
+  visibility: visible; }
+
+.ghouls-modal-bg {
+  background-color: rgba(233, 233, 233, 0.6);
+  bottom: 0;
+  font-size: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  text-indent: -400px;
+  top: -20px;
+  z-index: 15; }
+
+.ghouls-modal {
+  background-color: #E9E9E9;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  left: 50%;
+  max-height: 90vh;
+  max-width: 40em;
+  overflow-x: hidden;
+  padding: 1em;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 20; }
 
 body {
   font-weight: normal;

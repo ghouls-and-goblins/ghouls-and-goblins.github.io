@@ -6,7 +6,7 @@ const getRandomValue = () => {
 };
 
 export const NOMINEE_DATA = [
-    {
+	{
         id: 1,
         image: `/assets/img/frankenstein.jpg`,
         name: `Frankenstein's Monster`,

@@ -1,0 +1,62 @@
+.ghoul-selector {
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0 auto 1em;
+	padding: 0 1em;
+	width: 50%;
+	vertical-align: top;
+}
+
+.ghoul-checkbox {
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 10px solid $nomineeBorder;
+	border-radius: 420px;
+	display: block;
+	filter: grayscale(100%) contrast(110%);
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 100%;
+	}
+
+	&:hover,
+	.ghoul-selected &,
+	.ghoul-focused & {
+		border-color: $nomineeFocus;
+		filter: none;
+		outline: none;
+	}
+}
+
+.ghoul-name {
+	font-size: 1.2em;
+	margin-top: 10px;
+}
+
+@media screen and (min-width: 37.5em) {
+	.ghoul-selector {
+		width: 33.3%;
+	}
+}
+
+@media screen and (min-width: 64em) {
+	.ghoul-selector {
+		width: 25%;
+	}
+}
+
+@media screen and (min-width: 76.25em) {
+	.ghoul-selector {
+		width: 20%;
+	}
+}
+
+.ghoul-focused {
+	outline: 1px solid $linkFocus;
+}

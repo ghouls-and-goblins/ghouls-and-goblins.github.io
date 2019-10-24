@@ -1,57 +1,73 @@
 import { FormattedMessage, injectIntl } from 'react-intl';
 import React, { Component } from 'react';
-import AccessibleSelector from '../../components/avatar/accessibleSelector';
-import AvatarSelector from '../../components/avatar/avatarSelector';
+import AccessibleSelector from "../../components/selections/accesibleSelection";
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import { Helmet } from 'react-helmet';
 import LoginModal from '../../components/modal/loginModal';
-import PropTypes from 'prop-types';
 import { NOMINEE_DATA } from '../../data/nominees';
+import PropTypes from 'prop-types';
+import Selector from "../../components/selections/selectedNominee";
 import { setRef } from '../../utils/setRef';
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            count: 0,
-            isAuthenticated: false,
-            selections: [],
-            loginModalVisible: false,
-            errorModalVisible: false
-        }
-    };
+	constructor(props) {
+		super(props);
+		this.state = {
+			count: 0,
+			isAuthenticated: false,
+			selections: [],
+			loginModalVisible: false,
+			errorModalVisible: false
+		};
+	}
 
-    selectNominee = (monsterId) => {
-        const { selections } = this.state;
+	selectNominee = (monsterId,e) => {
+		const { selections, count } = this.state;
 
-        this.setState({
-            selections: [...selections, monsterId]
-        });
-    }
+		if (count >= 3) {
+			return;
+		}
 
-    renderNominees = () => {
+		this.setState({
+			count: count + 1,
+			selections: [...selections, monsterId]
+		});
+	};
+
+	renderNominees = () => {
 		const { keyboard } = this.props;
-        return (
-            <ul className="ghouls-nominee-list">
-                { NOMINEE_DATA.map((monster, index) => {
-                    const monsterId = monster.id;
+
+		return (
+			<ul className="ghouls-nominee-list">
+				{ NOMINEE_DATA.map((monster, index) => {
+					const monsterId = monster.id;
 
 					if (keyboard) {
-						return <AccessibleSelector
-							monster={ monster }
-							key={ `monster-${monsterId}` }
-							handleOnClick={ () => this.selectNominee(monsterId) } />;
+						return (
+							<AccessibleSelector
+								monster={monster}
+								key={`monster-${monsterId}`}
+								handleOnClick={() =>
+									this.selectNominee(monsterId)
+								}
+							/>
+						);
 					}
 
-                    return <AvatarSelector
-						monster={ monster }
-						key={ `monster-${monsterId}` }
-						handleOnClick={ () => this.selectNominee(monsterId) } />;
-                }) }
-            </ul>
-        );
-    };
+					return (
+						<Selector
+							monster={monster}
+							key={`monster-${monsterId}`}
+							handleOnClick={() =>
+								this.selectNominee(monsterId)
+							}
+						/>
+					);
+				}) }
+			</ul>
+		);
+	};
 
     getButtonText = () => {
         const { isAuthenticated } = this.state;
@@ -119,14 +135,14 @@ class Home extends Component {
 		);
 	}
 
-    render() {
+	render() {
 		const { errorModalVisible, loginModalVisible } = this.state;
 		const { keyboard, inert, location, styles } = this.props;
-		const motionQuery = (location.search && location.search.substr(1, 14));
+		const motionQuery = location.search && location.search.substr(1, 14);
 		const modalVisible = errorModalVisible || loginModalVisible;
 		const inertValue = inert ? modalVisible : false;
 
-        return (
+		return (
 			<>
 				<Helmet defer={ false }>
 					<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
@@ -141,19 +157,21 @@ class Home extends Component {
 					<section className="ghouls-content ghouls-body-content">
 						<div className="ghouls-selections">
 							{/* this.renderSelections() */}
-							{ this.renderButton() }
+							{this.renderButton()}
 						</div>
 
-						<h2 className="ghouls-heading"><FormattedMessage id="homeTitle" /></h2>
-		                { this.renderNominees() }
+						<h2 className="ghouls-heading">
+							<FormattedMessage id="homeTitle" />
+						</h2>
+						{this.renderNominees()}
 					</section>
 
 					<Footer />
 	            </main>
 				{ modalVisible && this.renderModal() }
 			</>
-        );
-    }
+		);
+	}
 }
 
 Home.defaultProps = {

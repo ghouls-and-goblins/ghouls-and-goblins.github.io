@@ -1,6 +1,7 @@
 import { FormattedMessage, injectIntl } from "react-intl";
 import React, { Component } from "react";
-import AccessibleSelector from "./../../components/avatar/accessibleSelector";
+import AccessibleSelector from "./../../components/selections/accesibleSelection";
+import Selector from "./../../components/selections/selectedNominee";
 import AvatarSelector from "./../../components/avatar/avatarSelector";
 import Footer from "./../../components/footer/footer";
 import Header from "./../../components/header/header";
@@ -20,12 +21,17 @@ class Home extends Component {
 		};
 	}
 
-	selectNominee = monsterId => {
-		const { selections } = this.state;
+	selectNominee = (monsterId,e) => {
+		let { selections, count } = this.state;
 
-		this.setState({
-			selections: [...selections, monsterId]
-		});
+		if (count >= 3) {
+			return;
+		} else {
+			count += 1;
+			this.setState({
+				selections: [...selections, monsterId]
+			});
+		}
 	};
 
 	renderNominees = () => {
@@ -35,7 +41,7 @@ class Home extends Component {
 				{NOMINEE_DATA.map((monster, index) => {
 					const monsterId = monster.id;
 
-					if (keyboard) {
+					if (!keyboard) {
 						return (
 							<AccessibleSelector
 								monster={monster}
@@ -45,9 +51,18 @@ class Home extends Component {
 								}
 							/>
 						);
+					} else {
+						return (
+							<Selector
+								monster={monster}
+								key={`monster-${monsterId}`}
+								handleOnClick={() =>
+									this.selectNominee(monsterId)
+								}
+							/>
+						);
 					}
 
-<<<<<<< HEAD
 					return (
 						<AvatarSelector
 							monster={monster}
@@ -109,75 +124,14 @@ class Home extends Component {
 	};
 
 	render() {
-		const { styles } = this.props;
-=======
-                    return <AvatarSelector
-						monster={ monster }
-						key={ `monster-${monsterId}` }
-						handleOnClick={ () => this.selectNominee(monsterId) } />;
-                }) }
-            </ul>
-        );
-    };
-
-    getButtonText = () => {
-        const { isAuthenticated } = this.state;
-
-        if (isAuthenticated) {
-            return <FormattedMessage id="submitVotes" />;
-        }
-
-        return <FormattedMessage id="logIn" />;
-    }
-
-    openLogin = () => {
-        // TODO: Create login Modal
-        // const { modalVisible } = this.state;
-        //
-        // this.setState({ loginModalVisible: !loginModalVisible });
-        const { isAuthenticated } = this.state;
-
-        this.setState({ isAuthenticated: !isAuthenticated });
-    }
-
-    submitData = () => {
-        const { selections, errorModalVisible } = this.state;
-        console.log(selections, errorModalVisible);
-
-        // if (selections.length) {
-        //     return this.props.push('/results');
-        // }
-        //
-        // this.setState({ errorModalVisible: !errorModalVisible });
-    }
-
-    renderButton = () => {
-        const { isAuthenticated } = this.state;
-        const buttonAction = isAuthenticated ? this.submitData : this.openLogin;
-
-        return (
-            <div className="ghouls-button-row">
-                <button
-                    type="button"
-                    className="ghouls-button"
-                    onClick={ buttonAction }>
-                    { this.getButtonText() }
-                </button>
-            </div>
-        );
-    }
-
-    render() {
 		const { errorModalVisible, loginModalVisible } = this.state;
 		const { inert, location, styles } = this.props;
-		const motionQuery = (location.search && location.search.substr(1, 14));
+		const motionQuery = location.search && location.search.substr(1, 14);
 		const modalVisible = errorModalVisible || loginModalVisible;
->>>>>>> 47c8e5e628b17d1133fb62256572b6fddaea43bd
 
 		return (
 			<>
-<<<<<<< HEAD
-				<section className="ghouls-content">
+				<main aria-hidden={inert && modalVisible}>
 					<Helmet defer={false}>
 						<link
 							rel="stylesheet"
@@ -185,45 +139,34 @@ class Home extends Component {
 							media="all"
 							href={`/${styles}.css`}
 						/>
-						{/* inert && (add inert plugin) */}
-=======
-				<main aria-hidden={ inert && modalVisible }>
-					<Helmet defer={ false }>
-						<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
-						{ motionQuery === 'reduced-motion' && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--reduced-motion.css" /> }
-						{ inert && <script src="/inert-polyfill.min.js" /> }
->>>>>>> 47c8e5e628b17d1133fb62256572b6fddaea43bd
+						{motionQuery === "reduced-motion" && (
+							<link
+								rel="stylesheet"
+								type="text/css"
+								media="all"
+								href="/ghouls--reduced-motion.css"
+							/>
+						)}
+						{inert && <script src="/inert-polyfill.min.js" />}
 					</Helmet>
 
 					<Header />
-<<<<<<< HEAD
-					<div className="ghouls-selections">
-						{/* this.renderSelections() */}
-						{this.renderButton()}
-					</div>
-					<h2 className="ghouls-heading">
-						<FormattedMessage id="homeTitle" />
-					</h2>
-					{this.renderNominees()}
-					<Footer />
-				</section>
-				{/* this.renderLoginModal() */}
-=======
 
 					<section className="ghouls-content">
 						<div className="ghouls-selections">
 							{/* this.renderSelections() */}
-							{ this.renderButton() }
+							{this.renderButton()}
 						</div>
 
-						<h2 className="ghouls-heading"><FormattedMessage id="homeTitle" /></h2>
-		                { this.renderNominees() }
+						<h2 className="ghouls-heading">
+							<FormattedMessage id="homeTitle" />
+						</h2>
+						{this.renderNominees()}
 					</section>
 
 					<Footer />
-	            </main>
+				</main>
 				{/* modalVisible && this.renderLoginModal() */}
->>>>>>> 47c8e5e628b17d1133fb62256572b6fddaea43bd
 			</>
 		);
 	}

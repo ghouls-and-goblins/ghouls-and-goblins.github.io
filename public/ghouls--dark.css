@@ -8,11 +8,14 @@ body {
   background-size: cover;
   bottom: 0;
   left: 0;
-  opacity: 0.075;
+  opacity: 0.1;
   position: fixed;
   right: 0;
   top: 0;
   z-index: -1; }
+
+.ghouls-main {
+  z-index: 10; }
 
 .ghouls-content {
   display: block;
@@ -20,6 +23,9 @@ body {
   max-width: 90em;
   padding: 0 1em;
   width: 80%; }
+
+.ghouls-body-content {
+  z-index: 2; }
 
 .ghouls-loading {
   padding: 3.25em 0;
@@ -121,7 +127,8 @@ body {
   padding: 1em 0.375em;
   position: fixed;
   right: 0;
-  text-align: center; }
+  text-align: center;
+  z-index: 10; }
 
 .ghouls-emoji {
   display: inline-block;
@@ -140,21 +147,45 @@ body {
   margin-top: 60px; }
 
 .ghouls-header {
-  background-color: #666666;
-  border-bottom: 1px solid #282828;
+  background-color: rgba(102, 102, 102, 0.8);
   color: #B0E272;
   height: 100px;
-  padding: 0.625em 0; }
+  padding: 0.625em 0;
+  position: relative;
+  z-index: 5; }
+  .ghouls-header:after {
+    background: url("/assets/img/overlay.png") repeat 50% 50%;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1; }
   .ghouls-header .ghouls-link {
     color: #B0E272; }
   .ghouls-header .ghouls-content {
-    display: flex; }
+    display: flex;
+    z-index: 5; }
 
 .ghouls-link {
   display: inline-block;
   height: 145px;
   margin-top: -45px;
-  width: auto; }
+  position: relative;
+  width: auto;
+  z-index: 5; }
+  .ghouls-link:after {
+    color: black;
+    content: 'G&G';
+    display: inline-block;
+    font-size: 46px;
+    left: 50%;
+    position: absolute;
+    top: 42px;
+    transform: translateX(-50%) rotate(-5deg); }
 
 .ghouls-logo {
   display: block;
@@ -163,10 +194,11 @@ body {
 
 .ghouls-description {
   display: inline-block;
-  font-family: "Amatic SC", cursive;
+  font-family: "Creepster", cursive;
   font-size: 3.375em;
   font-weight: bold;
-  margin-left: 20px; }
+  margin-left: 20px;
+  z-index: 5; }
 
 body {
   font-weight: normal;

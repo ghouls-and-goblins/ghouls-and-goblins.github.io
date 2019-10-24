@@ -5,6 +5,18 @@
 	padding: 0 1em;
 	width: 50%;
 	vertical-align: top;
+	left: 0;
+
+
+}
+
+.ghoul-selector.is-hidden{
+	transform: translate(-400px,-200px);
+	opacity: 0;
+
+}
+.ghoul-selector.is-shown{
+	transition: .5s;
 }
 
 .ghoul-checkbox {

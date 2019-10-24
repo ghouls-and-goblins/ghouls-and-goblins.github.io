@@ -5,31 +5,16 @@ $bodyText: $green;
 $bodyFont: $slab;
 $linkColor: $black;
 $linkFocus: $black;
+$focusColor: $transparent;
 
-$headerBG: $darkGreen;
+$headerBG: rgba($darkGreen, 0.8);
 $headerText: $lightGreen;
 $headerLink: $lightGreen;
 
 $footerBG: $black;
 $footerText: $lightGreen;
 $footerLink: $lightGreen;
+$footerLinkHover: $white;
 
 @import '../imports';
-
-body {
-	font-weight: normal;
-	font-size: 1em;
-}
-
-h1 {
-	font-family: $cursive;
-	font-weight: bold;
-	font-size: 1.6em;
-}
-
-h2,
-h3 {
-	font-family: $cursive;
-	font-weight: bold;
-	font-size: 1.4em;
-}
+@import '../features/contrast';

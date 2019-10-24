@@ -1,25 +1,5 @@
 @import '../variables';
-
-$bodyBg: $lightGrey;
-$bodyText: $black;
-$bodyFont: $slab;
-$linkColor: $black;
-$linkFocus: $black;
-
-$headerBG: $darkGrey;
-$headerText: $lightGreen;
-$headerLink: $lightGreen;
-
-$footerBG: $black;
-$footerText: $lightGreen;
-$footerLink: $lightGreen;
-
-@import '../imports';
-
-body {
-	font-weight: normal;
-	font-size: 1;
-}
+@import '../features/focus';
 
 a:focus {
 	// TODO

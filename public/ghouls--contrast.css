@@ -58,10 +58,10 @@ body {
   width: 100%; }
 
 .ghouls-button {
-  background-color: #FAFAFA;
-  border: 2px solid #3C3C3C;
+  background-color: #F5F5F5;
+  border: 2px solid #5E793D;
   border-radius: 6px;
-  color: #1D1D1D;
+  color: #5E793D;
   cursor: pointer;
   display: block;
   font-size: 1.25em;
@@ -70,8 +70,13 @@ body {
   transition: background 0.5s ease, color 0.5s ease;
   width: auto; }
   .ghouls-button:hover, .ghouls-button:focus {
-    background-color: #3C3C3C;
-    color: #FAFAFA; }
+    background-color: #5E793D;
+    color: #F5F5F5; }
+
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid transparent; }
 
 .ghouls-card {
   color: #1D1D1D;
@@ -141,7 +146,7 @@ body {
   color: #B0E272;
   transition: 0.35s ease color; }
   .ghouls-footer-link:hover, .ghouls-footer-link:focus {
-    color: #FEC0C5; }
+    color: #FFFFFF; }
 
 .ghouls-header-container {
   margin-bottom: 2em;
@@ -182,11 +187,15 @@ body {
     color: black;
     content: 'G&G';
     display: inline-block;
+    font-family: "Creepster", cursive;
     font-size: 46px;
     left: 50%;
     position: absolute;
     top: 42px;
     transform: translateX(-50%) rotate(-5deg); }
+
+.ghouls-title {
+  font-size: 2em; }
 
 .ghouls-logo {
   display: block;

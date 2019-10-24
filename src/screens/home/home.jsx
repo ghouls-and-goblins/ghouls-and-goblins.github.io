@@ -121,7 +121,7 @@ class Home extends Component {
 
     render() {
 		const { errorModalVisible, loginModalVisible } = this.state;
-		const { inert, location, styles } = this.props;
+		const { keyboard, inert, location, styles } = this.props;
 		const motionQuery = (location.search && location.search.substr(1, 14));
 		const modalVisible = errorModalVisible || loginModalVisible;
 		const inertValue = inert ? modalVisible : false;
@@ -131,6 +131,7 @@ class Home extends Component {
 				<Helmet defer={ false }>
 					<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
 					{ motionQuery === 'reduced-motion' && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--reduced-motion.css" /> }
+					{ keyboard && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--keyboard.css" /> }
 					{ inert && <script src="/inert-polyfill.min.js" /> }
 				</Helmet>
 

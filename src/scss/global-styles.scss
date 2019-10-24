@@ -71,10 +71,10 @@ body {
 }
 
 .ghouls-button {
-    background-color: #FAFAFA;
-    border: 2px solid #3C3C3C;
+    background-color: $bodyBg;
+    border: 2px solid $bodyText;
     border-radius: 6px;
-    color: #1D1D1D;
+    color: $bodyText;
     cursor: pointer;
     display: block;
     font-size: 1.25em;
@@ -85,7 +85,15 @@ body {
 
     &:hover,
     &:focus {
-        background-color: #3C3C3C;
-        color: #FAFAFA;
+        background-color: $bodyText;
+        color: $bodyBg;
     }
+}
+
+
+
+a:focus,
+button:focus,
+input:focus {
+	outline: 2px solid $focusColor;
 }

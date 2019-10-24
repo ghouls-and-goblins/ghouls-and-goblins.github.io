@@ -5,14 +5,16 @@ $bodyText: $green;
 $bodyFont: $cursive;
 $linkColor: $black;
 $linkFocus: $black;
+$focusColor: $transparent;
 
-$headerBG: $darkGreen;
+$headerBG: rgba($darkGreen, 0.8);
 $headerText: $lightGreen;
 $headerLink: $lightGreen;
 
 $footerBG: $black;
 $footerText: $green;
 $footerLink: $green;
+$footerLinkHover: $lightGreen;
 
 @import '../imports';
 

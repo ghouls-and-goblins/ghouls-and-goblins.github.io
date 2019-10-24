@@ -14,7 +14,7 @@ class Header extends Component {
 							<FormattedMessage id="appTitle" />
 						</h1>
 						<Link to="/" className="ghouls-link">
-							<img src="/assets/img/tombstone.svg" className="ghouls-logo" alt="" />
+							<img src="/assets/img/tombstone.svg" className="ghouls-logo" alt="" aria-hidden="true" />
 						</Link>
 						<p className="ghouls-description" aria-hidden="true">
 							<FormattedMessage id="appHeader" />

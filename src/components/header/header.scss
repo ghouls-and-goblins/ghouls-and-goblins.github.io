@@ -4,7 +4,7 @@
 }
 
 .ghouls-header {
-	background-color: rgba($headerBG, 0.8);
+	background-color: $headerBG;
     color: $headerText;
 	height: 100px;
     padding: 0.625em 0;
@@ -46,6 +46,7 @@
 		color: black;
 		content: 'G&G';
 		display: inline-block;
+		font-family: $cursive;
 		font-size: 46px;
 		left: 50%;
 	    position: absolute;
@@ -54,6 +55,9 @@
 	}
 }
 
+.ghouls-title {
+	font-size: 2em;
+}
 
 .ghouls-logo {
 	display: block;

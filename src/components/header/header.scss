@@ -4,11 +4,25 @@
 }
 
 .ghouls-header {
-    background-color: $headerBG;
-    border-bottom: 1px solid #282828;
+	background-color: rgba($headerBG, 0.8);
     color: $headerText;
 	height: 100px;
     padding: 0.625em 0;
+	position: relative;
+	z-index: 5;
+
+	&:after {
+		background: url('/assets/img/overlay.png') repeat 50% 50%;
+		background-size: cover;
+		bottom: 0;
+		content: '';
+		left: 0;
+		opacity: 0.2;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+	}
 
     .ghouls-link {
         color: $headerLink;
@@ -16,6 +30,7 @@
 
 	.ghouls-content {
 		display: flex;
+		z-index: 5;
 	}
 }
 
@@ -23,7 +38,20 @@
 	display: inline-block;
 	height: 145px;
 	margin-top: -45px;
+	position: relative;
 	width: auto;
+	z-index: 5;
+
+	&:after {
+		color: black;
+		content: 'G&G';
+		display: inline-block;
+		font-size: 46px;
+		left: 50%;
+	    position: absolute;
+	    top: 42px;
+	    transform: translateX(-50%) rotate(-5deg);
+	}
 }
 
 
@@ -39,4 +67,5 @@
 	font-size: 3.375em;
 	font-weight: bold;
 	margin-left: 20px;
+	z-index: 5;
 }

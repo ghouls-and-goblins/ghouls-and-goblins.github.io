@@ -106,7 +106,7 @@ class Home extends Component {
 
         return (
 			<>
-				<main aria-hidden={ inert && modalVisible }>
+				<main aria-hidden={ inert && modalVisible } className="ghouls-main">
 					<Helmet defer={ false }>
 						<link rel="stylesheet" type="text/css" media="all" href={ `/${styles}.css` } />
 						{ motionQuery === 'reduced-motion' && <link rel="stylesheet" type="text/css" media="all" href="/ghouls--reduced-motion.css" /> }
@@ -115,7 +115,7 @@ class Home extends Component {
 
 					<Header />
 
-					<section className="ghouls-content">
+					<section className="ghouls-content ghouls-body-content">
 						<div className="ghouls-selections">
 							{/* this.renderSelections() */}
 							{ this.renderButton() }

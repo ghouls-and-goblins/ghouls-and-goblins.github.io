@@ -8,6 +8,7 @@ import LoginModal from '../../components/modal/loginModal';
 import { NOMINEE_DATA } from '../../data/nominees';
 import PropTypes from 'prop-types';
 import Selector from "../../components/selections/selectedNominee";
+import SpookyScary from '../../components/modal/spookyScary';
 import { setRef } from '../../utils/setRef';
 
 class Home extends Component {
@@ -18,7 +19,8 @@ class Home extends Component {
 			isAuthenticated: false,
 			selections: [],
 			loginModalVisible: false,
-			errorModalVisible: false
+			errorModalVisible: false,
+			werewolfBarMitzVah: false
 		};
 	}
 
@@ -122,7 +124,7 @@ class Home extends Component {
     }
 
 	renderModal = () => {
-		const { errorModalVisible } = this.state;
+		const { errorModalVisible, werewolfBarMitzVah } = this.state;
 
 		if (errorModalVisible) {
 			console.log('there is an error');
@@ -130,16 +132,26 @@ class Home extends Component {
 			return;
 		}
 
+		if (werewolfBarMitzVah) {
+			return <SpookyScary handleClose={ this.werewolfBarMitzVah } />;
+		}
+
 		return (
 			<LoginModal handleClose={ this.toggleLoginModal } handleLogin={ this.handleLogin } />
 		);
 	}
 
+	werewolfBarMitzVah = () => {
+		const { werewolfBarMitzVah } = this.state;
+
+		this.setState({ werewolfBarMitzVah: !werewolfBarMitzVah });
+	}
+
 	render() {
-		const { errorModalVisible, loginModalVisible } = this.state;
+		const { errorModalVisible, loginModalVisible, werewolfBarMitzVah } = this.state;
 		const { keyboard, inert, location, styles } = this.props;
 		const motionQuery = location.search && location.search.substr(1, 14);
-		const modalVisible = errorModalVisible || loginModalVisible;
+		const modalVisible = errorModalVisible || loginModalVisible || werewolfBarMitzVah;
 		const inertValue = inert ? modalVisible : false;
 
 		return (
@@ -165,7 +177,7 @@ class Home extends Component {
 						{this.renderNominees()}
 					</section>
 
-					<Footer />
+					<Footer spookyScary={ this.werewolfBarMitzVah }  />
 	            </main>
 				{ modalVisible && this.renderModal() }
 			</>

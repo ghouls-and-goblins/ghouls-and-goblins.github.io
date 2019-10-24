@@ -12,10 +12,17 @@
 }
 
 .ghouls-emoji {
+	background: $transparent;
+	border: 0;
 	display: inline-block;
 	font-size: 2.5em;
+	outline: none;
 	margin: 0 3px;
 	vertical-align: middle;
+
+	&:focus {
+		outline: 2px solid $footerOutline;
+	}
 }
 
 .ghouls-footer-link {

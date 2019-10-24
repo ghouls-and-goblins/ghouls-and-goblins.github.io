@@ -3,7 +3,7 @@ body {
   color: #000000;
   font-family: "Arbutus Slab", serif; }
 
-.grouls-castle-bg {
+.ghouls-castle-bg {
   background: #FFFFFF url("/assets/img/castle.jpg") no-repeat 50% 50%;
   background-size: cover;
   bottom: 0;
@@ -141,6 +141,26 @@ input:focus {
   right: 0;
   text-align: center;
   z-index: 10; }
+  .ghouls-footer:after {
+    background-color: #000000;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: -1; }
+  .ghouls-footer:before {
+    background: url("/assets/img/hand.png") no-repeat 50% 50%;
+    background-size: contain;
+    bottom: 80px;
+    content: '';
+    display: block;
+    height: 90px;
+    filter: brightness(10%);
+    left: 7.5%;
+    position: fixed;
+    width: 90px; }
 
 .ghouls-emoji {
   background: transparent;

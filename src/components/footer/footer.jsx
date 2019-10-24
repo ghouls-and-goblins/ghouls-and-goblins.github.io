@@ -31,7 +31,7 @@ class Footer extends Component {
         				<FormattedMessage id="spookySecret" />
         			</button>
 	            </footer>
-				<div className="grouls-castle-bg"></div>
+				<div className="ghouls-castle-bg"></div>
 			</>
 		);
     }

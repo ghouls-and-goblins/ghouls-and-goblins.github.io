@@ -137,7 +137,7 @@ input:focus {
   left: 0;
   margin-top: 2em;
   padding: 1em 0.375em;
-  position: fixed;
+  position: relative;
   right: 0;
   text-align: center;
   z-index: 10; }
@@ -147,7 +147,7 @@ input:focus {
     content: '';
     display: block;
     left: 0;
-    position: fixed;
+    position: absolute;
     right: 0;
     z-index: -1; }
   .ghouls-footer:before {
@@ -159,7 +159,7 @@ input:focus {
     height: 90px;
     filter: brightness(10%);
     left: 7.5%;
-    position: fixed;
+    position: absolute;
     width: 90px; }
 
 .ghouls-emoji {

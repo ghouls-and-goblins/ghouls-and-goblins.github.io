@@ -123,6 +123,11 @@ input:focus {
   .ghouls-footer-link:hover, .ghouls-footer-link:focus {
     color: #B0E272; }
 
+.ghouls-secret-trigger {
+  bottom: 25px;
+  left: -9999px;
+  position: absolute; }
+
 .ghouls-header-container {
   margin-bottom: 2em;
   margin-top: 60px; }

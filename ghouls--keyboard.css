@@ -123,6 +123,11 @@ input:focus {
   .ghouls-footer-link:hover, .ghouls-footer-link:focus {
     color: #FFFFFF; }
 
+.ghouls-secret-trigger {
+  bottom: 25px;
+  left: -9999px;
+  position: absolute; }
+
 .ghouls-header-container {
   margin-bottom: 2em;
   margin-top: 60px; }
@@ -308,3 +313,7 @@ h3 {
   font-family: "Creepster", cursive;
   font-weight: bold;
   font-size: 1.4em; }
+
+.ghouls-secret-trigger:focus {
+  left: 50%;
+  transform: translateX(-50%); }

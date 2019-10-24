@@ -6,6 +6,7 @@ class Header extends Component {
     getSwapiText = () => <FormattedMessage id="swapi" />;
 
     render() {
+		const {logoLink} = this.props;
         return (
             <header className="ghouls-header-container">
 				<div className="ghouls-header">
@@ -13,7 +14,7 @@ class Header extends Component {
 						<h1 className="ghouls-title ghouls-accessible-text">
 							<FormattedMessage id="appTitle" />
 						</h1>
-						<Link to="/" className="ghouls-link">
+						<Link to={logoLink} className="ghouls-link">
 							<img src="/assets/img/tombstone.svg" className="ghouls-logo" alt="" aria-hidden="true" />
 						</Link>
 						<p className="ghouls-description" aria-hidden="true">

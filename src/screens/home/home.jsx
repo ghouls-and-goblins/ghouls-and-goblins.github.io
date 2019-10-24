@@ -157,7 +157,7 @@ class Home extends Component {
 			loginModalVisible,
 			werewolfBarMitzVah
 		} = this.state;
-		const { inert, location, styles } = this.props;
+		const { inert, location, styles, next } = this.props;
 		const motionQuery = location.search && location.search.substr(1, 14);
 		const modalVisible =
 			errorModalVisible || loginModalVisible || werewolfBarMitzVah;
@@ -188,7 +188,7 @@ class Home extends Component {
 					className="ghouls-main"
 					id="ghouls-main"
 				>
-					<Header />
+					<Header logoLink={next} />
 
 					<section className="ghouls-content ghouls-body-content">
 						<div className="ghouls-selections">

@@ -7,18 +7,21 @@ class Header extends Component {
 
     render() {
         return (
-            <header className="ghouls-header">
-                <div className="ghouls-content">
-                    <h1 className="ghouls-title">
-                        <Link to="/" className="ghouls-link">
-                            <FormattedMessage id="appTitle" />
-                        </Link>
-                    </h1>
-                    <p className="ghouls-description">
-                        <FormattedMessage id="appDescription" />
-                    </p>
-                </div>
-            </header>
+            <header className="ghouls-header-container">
+				<div className="ghouls-header">
+					<div className="ghouls-content">
+						<h1 className="ghouls-title ghouls-accessible-text">
+							<FormattedMessage id="appTitle" />
+						</h1>
+						<Link to="/" className="ghouls-link">
+							<img src="/assets/img/tombstone.svg" className="ghouls-logo" alt="" />
+						</Link>
+						<p className="ghouls-description" aria-hidden="true">
+							<FormattedMessage id="appHeader" />
+						</p>
+					</div>
+				</div>
+			</header>
         );
     }
 }

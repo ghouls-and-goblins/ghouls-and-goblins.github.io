@@ -1,6 +1,8 @@
 {
     "appDescription": "Vote for your favorite ghouls, goblins, and monsters to enter the esteemed ranks Dr. Frankenstein's Ghouls and Goblins Hall of Fame!",
 
+	"appHeader": "Hall of Fame",
+
 	"appTitle": "Ghouls and Goblins Hall of Fame Fan Vote",
 
 	"closeModal": "Go Back",

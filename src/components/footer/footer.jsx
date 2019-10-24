@@ -11,7 +11,7 @@ class Footer extends Component {
 			<>
 	            <footer className="ghouls-footer">
 	                <p><FormattedMessage id="footerDescription" values={{
-	                    emoji: <span role="img" aria-label={this.getEmojiText()}>🧟</span>,
+	                    emoji: <span role="img" className="ghouls-emoji" aria-label={this.getEmojiText()}>🧟</span>,
 	                    link: <a href="https://www.ryandudek.com" target="new" className="ghouls-footer-link">{ this.getNameText() }</a>
 	                }} /></p>
 	            </footer>

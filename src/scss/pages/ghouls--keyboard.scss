@@ -1,26 +1,32 @@
 @import '../variables';
 
-$bodyBg: $lightGrey;
-$bodyText: $black;
+$bodyBg: $lightGreyAccessible;
+$bodyText: $green;
 $bodyFont: $slab;
-$linkColor: $black;
-$linkFocus: $black;
+$linkColor: $green;
+$linkFocus: $lightGreen;
 
-$headerBG: $darkGrey;
+$focusColor: $lightGreen;
+$focusOutline: $lightGreen;
+$headerOutline: $darkGreen;
+$footerOutline: $lightGreen;
+
+$nomineeBorder: $bodyBg;
+$nomineeFocus: $lightGreen;
+
+$headerBG: rgba($darkGreen, 0.8);
 $headerText: $lightGreen;
 $headerLink: $lightGreen;
 
 $footerBG: $black;
 $footerText: $lightGreen;
 $footerLink: $lightGreen;
+$footerLinkHover: $white;
 
 @import '../imports';
+@import '../features/contrast';
 
-body {
-	font-weight: normal;
-	font-size: 1;
-}
-
-a:focus {
-	// TODO
+.ghouls-secret-trigger:focus {
+    left: 50%;
+    transform: translateX(-50%);
 }

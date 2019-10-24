@@ -6,17 +6,25 @@ $bodyFont: $cursive;
 $linkColor: $black;
 $linkFocus: $black;
 
-$headerBG: $darkGreen;
+$focusColor: $transparent;
+$focusOutline: $transparent;
+$headerOutline: $transparent;
+$footerOutline: $transparent;
+
+$nomineeBorder: $bodyBg;
+$nomineeFocus: $lightGreen;
+
+$headerBG: rgba($darkGreen, 0.8);
 $headerText: $lightGreen;
 $headerLink: $lightGreen;
 
 $footerBG: $black;
 $footerText: $green;
 $footerLink: $green;
+$footerLinkHover: $lightGreen;
 
 @import '../imports';
 
 body {
 	font-weight: bold;
-	font-size: 1.3em;
 }

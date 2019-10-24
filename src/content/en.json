@@ -1,11 +1,13 @@
 {
     "appDescription": "Vote for your favorite ghouls, goblins, and monsters to enter the esteemed ranks Dr. Frankenstein's Ghouls and Goblins Hall of Fame!",
 
+	"appHeader": "Hall of Fame",
+
 	"appTitle": "Ghouls and Goblins Hall of Fame Fan Vote",
 
 	"closeModal": "Go Back",
 
-    "emoji": "SCIENCE!",
+    "emoji": "science",
 
     "footerDescription": "Made with {emoji} by {link}",
 
@@ -15,7 +17,17 @@
 
     "logIn": "Sign In to Vote",
 
+	"loginAction": "Sign In!",
+
+	"loginInput": "Email address",
+
+	"loginTitle": "Enter your email address to vote",
+
 	"resultsTitle": "Results",
+
+    "spookyScary": "Spooky Scary!",
+
+    "spookySecret": "Click for something Spooky Scary!",
 
     "submitVotes": "Submit My Vote",
 

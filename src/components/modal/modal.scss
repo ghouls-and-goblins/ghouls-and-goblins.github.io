@@ -1,0 +1,62 @@
+.ghouls-modal-hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.ghouls-modal-visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+.ghouls-modal-bg {
+	background-color: rgba($bodyBg, 0.6);
+	bottom: 0;
+	font-size: 0;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	right: 0;
+	text-indent: -400px;
+	top: -20px;
+	z-index: 15;
+}
+
+.ghouls-modal {
+	background-color: $bodyBg;
+	border: 2px solid $bodyText;
+	border-radius: 3px;
+	left: 50%;
+	max-height: 90vh;
+	max-width: 40em;
+	overflow-x: hidden;
+	padding: 1em;
+	position: fixed;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	z-index: 20;
+}
+
+.ghouls-modal-close {
+	background: transparent;
+	border: 0;
+	display: block;
+	height: 45px;
+	overflow: hidden;
+	position: absolute;
+	right: 7.5px;
+	top: 15px;
+	width: 45px;
+
+	&:after {
+		content: 'X';
+		display: block;
+		font-family: $cursive;
+		font-size: 42px;
+		font-weight: bold;
+	}
+}
+
+.ghouls-modal-heading {
+	font-size: 2.4em;
+}

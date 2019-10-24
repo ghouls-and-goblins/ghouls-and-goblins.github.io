@@ -1,26 +1,27 @@
 @import '../variables';
 
-$bodyBg: $lightGrey;
-$bodyText: $black;
+$bodyBg: $darkGreen;
+$bodyText: $lightGrey;
 $bodyFont: $slab;
-$linkColor: $black;
+$linkColor: $lightGreen;
 $linkFocus: $black;
 
-$headerBG: $darkGrey;
+$focusColor: $lightGreen;
+$focusOutline: $lightGreen;
+$headerOutline: $lightGreen;
+$footerOutline: $lightGreen;
+
+$nomineeBorder: $bodyBg;
+$nomineeFocus: $lightGreen;
+
+$headerBG: rgba($black, 0.25);
 $headerText: $lightGreen;
 $headerLink: $lightGreen;
 
 $footerBG: $black;
 $footerText: $lightGreen;
 $footerLink: $lightGreen;
+$footerLinkHover: $white;
 
 @import '../imports';
-
-body {
-	font-weight: normal;
-	font-size: 1;
-}
-
-a:focus {
-	// TODO
-}
+@import '../features/contrast';

@@ -4,10 +4,25 @@
     color: $footerText;
     left: 0;
     margin-top: 2em;
-    padding: 0.75em 0.375em;
+    padding: 1em 0.375em;
     position: fixed;
     right: 0;
     text-align: center;
+	z-index: 10;
+}
+
+.ghouls-emoji {
+	background: $transparent;
+	border: 0;
+	display: inline-block;
+	font-size: 2.5em;
+	outline: none;
+	margin: 0 3px;
+	vertical-align: middle;
+
+	&:focus {
+		outline: 2px solid $footerOutline;
+	}
 }
 
 .ghouls-footer-link {
@@ -16,6 +31,12 @@
 
     &:hover,
     &:focus {
-        color: #FEC0C5;
+        color: $footerLinkHover;
     }
+}
+
+.ghouls-secret-trigger {
+    bottom: 25px;
+    left: -9999px;
+    position: absolute;
 }

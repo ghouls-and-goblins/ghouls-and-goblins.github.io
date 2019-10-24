@@ -62,3 +62,9 @@ textarea,
 select {
   font: inherit;
 }
+
+iframe {
+	display: block;
+	height: 315px;
+	margin: 0 auto;
+}

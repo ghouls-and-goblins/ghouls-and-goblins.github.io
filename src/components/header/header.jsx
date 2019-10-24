@@ -1,20 +1,26 @@
-import { FormattedMessage, injectIntl } from 'react-intl';
-import React, { Component } from 'react';
-import { Link } from '@reach/router';
+import { FormattedMessage, injectIntl } from "react-intl";
+import React, { Component } from "react";
+import { Link } from "@reach/router";
 
 class Header extends Component {
-    getSwapiText = () => <FormattedMessage id="swapi" />;
+	getSwapiText = () => <FormattedMessage id="swapi" />;
 
-    render() {
-        return (
-            <header className="ghouls-header-container">
+	render() {
+		const { logoLink } = this.props;
+		return (
+			<header className="ghouls-header-container">
 				<div className="ghouls-header">
 					<div className="ghouls-content">
 						<h1 className="ghouls-title ghouls-accessible-text">
 							<FormattedMessage id="appTitle" />
 						</h1>
-						<Link to="/" className="ghouls-link">
-							<img src="/assets/img/tombstone.svg" className="ghouls-logo" alt="" aria-hidden="true" />
+						<Link to={logoLink} className="ghouls-link">
+							<img
+								src="/assets/img/tombstone.svg"
+								className="ghouls-logo"
+								alt=""
+								aria-hidden="true"
+							/>
 						</Link>
 						<p className="ghouls-description" aria-hidden="true">
 							<FormattedMessage id="appHeader" />
@@ -22,8 +28,8 @@ class Header extends Component {
 					</div>
 				</div>
 			</header>
-        );
-    }
+		);
+	}
 }
 
 export default injectIntl(Header);

@@ -38,7 +38,6 @@ class AccessibleSelector extends Component {
 						id={monsterId}
 						onChange={handleOnClick}
 					/>
-					<img src={monster.image} alt="" className="ghoul-image" />
 				</div>
 				<label htmlFor={monsterId} className="ghoul-name">
 					{monster.name}

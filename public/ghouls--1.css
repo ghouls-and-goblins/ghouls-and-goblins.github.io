@@ -234,6 +234,10 @@ input:focus {
     filter: none;
     outline: none; }
 
+.ghoul-checkbox-input {
+  left: -100px;
+  position: absolute; }
+
 .ghoul-name {
   font-size: 1.2em;
   margin-top: 10px; }

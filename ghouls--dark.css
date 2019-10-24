@@ -1,10 +1,10 @@
 body {
-  background-color: #313F1F;
+  background-color: #1d2512;
   color: #E9E9E9;
   font-family: "Arbutus Slab", serif; }
 
 .grouls-castle-bg {
-  background: #313F1F url("/assets/img/castle.jpg") no-repeat 50% 50%;
+  background: #1d2512 url("/assets/img/castle.jpg") no-repeat 50% 50%;
   background-size: cover;
   bottom: 0;
   left: 0;
@@ -41,6 +41,29 @@ body {
 .ghouls-heading {
   margin-bottom: 1em; }
 
+.ghouls-section-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 1.6em;
+  max-width: 54em;
+  width: 100%; }
+  .ghouls-section-header .ghouls-button {
+    margin-right: 0;
+    vertical-align: middle; }
+
+.ghouls-section-heading {
+  display: inline-block;
+  font-family: "Arbutus Slab", serif;
+  font-size: 2.2em;
+  margin-bottom: 0;
+  margin-right: auto;
+  vertical-align: middle; }
+
+.ghouls-section-description {
+  font-size: 1.4em;
+  margin-top: 1em; }
+
 .ghouls-accessible-text {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -58,7 +81,7 @@ body {
   width: 100%; }
 
 .ghouls-button {
-  background-color: #313F1F;
+  background-color: #1d2512;
   border: 2px solid #E9E9E9;
   border-radius: 6px;
   color: #E9E9E9;
@@ -71,7 +94,7 @@ body {
   width: auto; }
   .ghouls-button:hover, .ghouls-button:focus {
     background-color: #E9E9E9;
-    color: #313F1F; }
+    color: #1d2512; }
 
 .ghouls-nominee-list {
   margin: 0 -40px 2em;
@@ -225,7 +248,7 @@ input:focus {
   visibility: visible; }
 
 .ghouls-modal-bg {
-  background-color: rgba(49, 63, 31, 0.6);
+  background-color: rgba(29, 37, 18, 0.6);
   bottom: 0;
   font-size: 0;
   left: 0;
@@ -237,7 +260,7 @@ input:focus {
   z-index: 15; }
 
 .ghouls-modal {
-  background-color: #313F1F;
+  background-color: #1d2512;
   border: 2px solid #E9E9E9;
   border-radius: 3px;
   left: 50%;
@@ -274,7 +297,7 @@ input:focus {
 .ghoul-selector {
   box-sizing: border-box;
   display: inline-block;
-  margin: 0 auto 1em;
+  margin: 0 auto 2.25em;
   padding: 0 1em;
   width: 50%;
   vertical-align: top; }
@@ -283,7 +306,7 @@ input:focus {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 10px solid #313F1F;
+  border: 10px solid #1d2512;
   border-radius: 420px;
   display: block;
   filter: grayscale(100%) contrast(110%);
@@ -306,7 +329,7 @@ input:focus {
   position: absolute; }
 
 .ghoul-name {
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin-top: 10px; }
 
 @media screen and (min-width: 37.5em) {

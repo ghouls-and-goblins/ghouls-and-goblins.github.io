@@ -1,0 +1,6 @@
+* .ghoul-selector.is-hidden {
+  transform: translate(0, 0);
+  opacity: 1; }
+
+* .ghoul-selector.is-shown {
+  transition: 0; }

@@ -27,6 +27,15 @@ class Home extends Component {
 	selectNominee = (monsterId) => {
 		const { selections, count } = this.state;
 
+		if (selections.indexOf(monsterId) >= 0) {
+			this.setState({
+				count: count - 1,
+				selections: selections.filter((prevSelection) => prevSelection !== monsterId)
+			});
+
+			return;
+		}
+
 		if (count >= 3) {
 			return;
 		}

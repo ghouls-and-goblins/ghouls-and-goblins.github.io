@@ -384,6 +384,7 @@ input:focus {
     opacity: 0;
     transform: translate(-200px, -200px); }
   .ghoul-animation.is-shown {
+    transition: .5s ease-in-out all;
     transform: translate(0, 0); }
 
 .ghoul-checkbox {

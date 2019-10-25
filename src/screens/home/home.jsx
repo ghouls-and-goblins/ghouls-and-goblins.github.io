@@ -27,10 +27,10 @@ class Home extends Component {
 	componentDidMount() {
 		let selectors = document.querySelectorAll(".ghoul-selector.is-hidden");
 		for (let i = 0; i < selectors.length; i++) {
-			setTimeout(function(){
-			selectors[i].classList.remove("is-hidden");
-			selectors[i].classList.add("is-shown");
-			},150*i+1)
+			setTimeout(function() {
+				selectors[i].classList.remove("is-hidden");
+				selectors[i].classList.add("is-shown");
+			}, 150 * i + 1);
 		}
 	}
 

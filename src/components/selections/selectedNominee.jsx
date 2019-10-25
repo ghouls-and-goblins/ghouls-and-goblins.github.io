@@ -5,7 +5,7 @@ class Selector extends Component {
 	render() {
 		const { handleOnClick, monster, selected } = this.props;
 		const monsterId = `monster-${monster.id}`;
-		const containerClass = `ghoul-selector ghoul-animation is-hidden ${selected ? ("ghoul-selected"): ("")}`;
+		const containerClass = `ghoul-selector ghoul-animation ${selected ? 'ghoul-selected' : ''}`;
 
 		return (
 			<div className={containerClass} onClick={handleOnClick}>

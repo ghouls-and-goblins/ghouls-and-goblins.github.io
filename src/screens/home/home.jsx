@@ -26,12 +26,14 @@ class Home extends Component {
 	}
 
 	componentDidMount() {
-		let selectors = document.querySelectorAll(".ghoul-animation.is-hidden");
+		const selectors = document.querySelectorAll('.ghoul-animation');
 
 		for (let i = 0; i < selectors.length; i++) {
+			selectors[i].classList.add('is-hidden');
+
 			setTimeout(function() {
-				selectors[i].classList.remove("is-hidden");
-				selectors[i].classList.add("is-shown");
+				selectors[i].classList.remove('is-hidden');
+				selectors[i].classList.remove('is-shown');
 			}, 150 * i + 1);
 		}
 	}
@@ -64,7 +66,7 @@ class Home extends Component {
 
 		return (
 			<ul className="ghouls-nominee-list">
-				{NOMINEE_DATA.map((monster, index) => {
+				{NOMINEE_DATA.map((monster) => {
 					const monsterId = monster.id;
 
 					if (keyboard) {

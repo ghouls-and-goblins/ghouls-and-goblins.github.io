@@ -11,8 +11,11 @@ class AccessibleSelector extends Component {
 
 	render() {
 		const { handleOnClick, monster, selected } = this.props;
+		const { focused } = this.state;
 		const monsterId = `monster-${monster.id}`;
-		const containerClass = `ghoul-selector ghoul-animation is-hidden ${selected && "ghoul-selected"}`;
+		const containerClass = `ghoul-selector ghoul-animation ${
+			selected ? 'ghoul-selected' : ''
+		} ${focused ? 'ghoul-focused' : '' }`;
 
 		const handleFocus = () => {
 			this.setState({
@@ -27,7 +30,7 @@ class AccessibleSelector extends Component {
 		};
 
 		return (
-			<div className={`${containerClass} ${this.state.focused && 'ghoul-focused'}`} onClick={handleOnClick}>
+			<div className={ containerClass } onClick={handleOnClick}>
 				<div className="ghoul-checkbox">
 					<input
 						onFocus={handleFocus}

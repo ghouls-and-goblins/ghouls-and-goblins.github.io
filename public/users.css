@@ -378,12 +378,13 @@ input:focus {
   width: 50%;
   vertical-align: top; }
 
-.ghoul-animation.is-hidden {
-  opacity: 0;
-  transform: translate(-200px, -200px); }
-
-.ghoul-animation.is-shown {
+.ghoul-animation {
   transition: .5s; }
+  .ghoul-animation.is-hidden {
+    opacity: 0;
+    transform: translate(-200px, -200px); }
+  .ghoul-animation.is-shown {
+    transform: translate(0, 0); }
 
 .ghoul-checkbox {
   border: 7.5px solid transparent;
@@ -655,11 +656,14 @@ h3 {
     --footerLinkHover: #FFFFFF; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .ghoul-animation.is-hidden {
-    transform: translate(0, 0);
-    opacity: 1; }
-  .ghoul-animation.is-shown {
-    transition: 0; } }
+  .ghoul-animation {
+    opacity: 1;
+    transition: 0; }
+    .ghoul-animation.is-shown {
+      transform: translate(0, 0); }
+    .ghoul-animation.is-hidden {
+      transform: translate(0, 0);
+      opacity: 1; } }
 
 body {
   background-color: var(--bodyBg);

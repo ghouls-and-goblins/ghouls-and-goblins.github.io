@@ -7,7 +7,7 @@ class Result extends Component {
         const { data, totalVotes } = this.props;
 
         return (
-            <li className="ghouls-results-item  ghoul-animation is-hidden">
+            <li className="ghouls-results-item  ghoul-animation">
 				<div className="ghouls-results-img-container">
                 	<img src={ data.image } className="ghouls-result-img" alt="" />
 				</div>

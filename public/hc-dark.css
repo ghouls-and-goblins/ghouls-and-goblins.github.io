@@ -1,10 +1,10 @@
 body {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #000000;
+  color: #FFFFFF;
   font-family: "Arbutus Slab", serif; }
 
 .ghouls-castle-bg {
-  background: #FFFFFF url("/assets/img/castle.jpg") no-repeat 50% 50%;
+  background: #000000 url("/assets/img/castle.jpg") no-repeat 50% 50%;
   background-size: cover;
   bottom: 0;
   left: 0;
@@ -33,10 +33,10 @@ body {
   text-align: center; }
 
 .ghouls-link {
-  color: #313F1F;
+  color: #B0E272;
   transition: 0.35s ease color; }
   .ghouls-link:hover, .ghouls-link:focus {
-    color: #313F1F; }
+    color: #FFFFFF; }
 
 .ghouls-heading {
   margin-bottom: 1em; }
@@ -74,10 +74,10 @@ body {
   width: 100%; }
 
 .ghouls-button {
-  background-color: #FFFFFF;
-  border: 2px solid #000000;
+  background-color: #000000;
+  border: 2px solid #FFFFFF;
   border-radius: 6px;
-  color: #000000;
+  color: #FFFFFF;
   cursor: pointer;
   display: block;
   font-size: 1.25em;
@@ -86,8 +86,8 @@ body {
   transition: background 0.5s ease, color 0.5s ease;
   width: auto; }
   .ghouls-button:hover, .ghouls-button:focus {
-    background-color: #000000;
-    color: #FFFFFF; }
+    background-color: #FFFFFF;
+    color: #000000; }
 
 .ghouls-nominee-list {
   margin: 0 -40px 2em;
@@ -108,7 +108,7 @@ body {
 a:focus,
 button:focus,
 input:focus {
-  outline: 2px solid #313F1F; }
+  outline: 2px solid #B0E272; }
 
 @media screen and (min-width: 36em) {
   .ghouls-nominee-list {
@@ -171,7 +171,7 @@ input:focus {
   margin: 0 3px;
   vertical-align: middle; }
   .ghouls-emoji:focus {
-    outline: 2px solid #313F1F; }
+    outline: 2px solid #B0E272; }
 
 .ghouls-footer-link {
   color: #B0E272;
@@ -189,8 +189,8 @@ input:focus {
   margin-top: 60px; }
 
 .ghouls-header {
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #000000;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #B0E272;
   height: 100px;
   padding: 0.625em 0;
   position: relative;
@@ -207,7 +207,7 @@ input:focus {
     top: 0;
     z-index: 1; }
   .ghouls-header .ghouls-link {
-    color: #313F1F; }
+    color: #B0E272; }
   .ghouls-header .ghouls-content {
     display: flex;
     z-index: 5; }
@@ -277,7 +277,7 @@ input:focus {
   visibility: visible; }
 
 .ghouls-modal-bg {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.75);
   bottom: 0;
   font-size: 0;
   left: 0;
@@ -289,8 +289,8 @@ input:focus {
   z-index: 15; }
 
 .ghouls-modal {
-  background-color: #FFFFFF;
-  border: 2px solid #000000;
+  background-color: #000000;
+  border: 2px solid #FFFFFF;
   border-radius: 3px;
   left: 50%;
   max-height: 90vh;

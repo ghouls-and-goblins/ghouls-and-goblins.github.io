@@ -36,7 +36,7 @@
         "deploy": "gh-pages -b master -d build",
         "lint": "eslint . --ignore-path .gitignore",
         "pa11y": "node pa11y.js",
-        "scss": "concurrently \"node-sass -o public src/scss/pages/ghouls--1.scss\" \"node-sass -o public src/scss/pages/ghouls--contrast.scss\" \"node-sass -o public src/scss/pages/ghouls--dark.scss\" \"node-sass -o public src/scss/pages/ghouls--high-contrast-dark.scss\" \"node-sass -o public src/scss/pages/ghouls--high-contrast-light.scss\" \"node-sass -o public src/scss/pages/ghouls--keyboard.scss\" \"node-sass -o public src/scss/pages/ghouls--reduced-motion.scss\"",
+        "scss": "concurrently \"node-sass -o public src/scss/pages/default.scss\" \"node-sass -o public src/scss/pages/contrast.scss\" \"node-sass -o public src/scss/pages/dark.scss\" \"node-sass -o public src/scss/pages/hc-dark.scss\" \"node-sass -o public src/scss/pages/hc-light.scss\" \"node-sass -o public src/scss/pages/keyboard.scss\" \"node-sass -o public src/scss/pages/reduced-motion.scss\" \"node-sass -o public src/scss/pages/users.scss\"",
         "watch-css": "nodemon -e scss -x \"npm run scss\""
     },
     "devDependencies": {

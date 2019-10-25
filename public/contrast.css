@@ -277,7 +277,7 @@ input:focus {
   visibility: visible; }
 
 .ghouls-modal-bg {
-  background-color: rgba(245, 245, 245, 0.6);
+  background-color: rgba(0, 0, 0, 0.75);
   bottom: 0;
   font-size: 0;
   left: 0;

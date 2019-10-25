@@ -141,19 +141,10 @@ input:focus {
   right: 0;
   text-align: center;
   z-index: 10; }
-  .ghouls-footer:after {
-    background-color: #000000;
-    bottom: 0;
-    content: '';
-    display: block;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -1; }
   .ghouls-footer:before {
     background: url("/assets/img/hand.png") no-repeat 50% 50%;
     background-size: contain;
-    bottom: 80px;
+    bottom: 85px;
     content: '';
     display: block;
     height: 90px;

@@ -10,21 +10,10 @@
     text-align: center;
 	z-index: 10;
 
-	&:after {
-		background-color: $footerBG;
-		bottom: 0;
-		content: '';
-		display: block;
-		left: 0;
-		position: absolute;
-		right: 0;
-		z-index: -1;
-	}
-
 	&:before {
 		background: url('/assets/img/hand.png') no-repeat 50% 50%;
 		background-size: contain;
-		bottom: 80px;
+		bottom: 85px;
 		content: '';
 		display: block;
 		height: 90px;

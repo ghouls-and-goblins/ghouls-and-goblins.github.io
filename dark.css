@@ -1,10 +1,10 @@
 body {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #1d2512;
+  color: #E9E9E9;
   font-family: "Arbutus Slab", serif; }
 
-.grouls-castle-bg {
-  background: #000000 url("/assets/img/castle.jpg") no-repeat 50% 50%;
+.ghouls-castle-bg {
+  background: #1d2512 url("/assets/img/castle.jpg") no-repeat 50% 50%;
   background-size: cover;
   bottom: 0;
   left: 0;
@@ -36,7 +36,7 @@ body {
   color: #B0E272;
   transition: 0.35s ease color; }
   .ghouls-link:hover, .ghouls-link:focus {
-    color: #FFFFFF; }
+    color: #000000; }
 
 .ghouls-heading {
   margin-bottom: 1em; }
@@ -74,10 +74,10 @@ body {
   width: 100%; }
 
 .ghouls-button {
-  background-color: #000000;
-  border: 2px solid #FFFFFF;
+  background-color: #1d2512;
+  border: 2px solid #E9E9E9;
   border-radius: 6px;
-  color: #FFFFFF;
+  color: #E9E9E9;
   cursor: pointer;
   display: block;
   font-size: 1.25em;
@@ -86,8 +86,8 @@ body {
   transition: background 0.5s ease, color 0.5s ease;
   width: auto; }
   .ghouls-button:hover, .ghouls-button:focus {
-    background-color: #FFFFFF;
-    color: #000000; }
+    background-color: #E9E9E9;
+    color: #1d2512; }
 
 .ghouls-nominee-list {
   margin: 0 -40px 2em;
@@ -133,14 +133,25 @@ input:focus {
 .ghouls-footer {
   background-color: #000000;
   bottom: 0;
-  color: #FFFFFF;
+  color: #B0E272;
   left: 0;
   margin-top: 2em;
   padding: 1em 0.375em;
-  position: fixed;
+  position: relative;
   right: 0;
   text-align: center;
   z-index: 10; }
+  .ghouls-footer:before {
+    background: url("/assets/img/hand.png") no-repeat 50% 50%;
+    background-size: contain;
+    bottom: 85px;
+    content: '';
+    display: block;
+    height: 90px;
+    filter: brightness(10%);
+    left: 7.5%;
+    position: absolute;
+    width: 90px; }
 
 .ghouls-emoji {
   background: transparent;
@@ -169,7 +180,7 @@ input:focus {
   margin-top: 60px; }
 
 .ghouls-header {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.25);
   color: #B0E272;
   height: 100px;
   padding: 0.625em 0;
@@ -210,10 +221,11 @@ input:focus {
     position: absolute;
     top: 22px;
     transform: translateX(-50%) rotate(-5deg); }
-  .ghouls-link:focus {
-    outline: 3px dashed #B0E272; }
-    .ghouls-link:focus:after {
-      color: #313F1F; }
+  .ghouls-link:focus, .ghouls-link:hover {
+    filter: brightness(75%); }
+    .ghouls-link:focus:after, .ghouls-link:hover:after {
+      color: #B0E272;
+      filter: brightness(100%); }
 
 .ghouls-title {
   font-size: 2em; }
@@ -256,7 +268,7 @@ input:focus {
   visibility: visible; }
 
 .ghouls-modal-bg {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.75);
   bottom: 0;
   font-size: 0;
   left: 0;
@@ -268,8 +280,8 @@ input:focus {
   z-index: 15; }
 
 .ghouls-modal {
-  background-color: #000000;
-  border: 2px solid #FFFFFF;
+  background-color: #1d2512;
+  border: 2px solid #E9E9E9;
   border-radius: 3px;
   left: 50%;
   max-height: 90vh;
@@ -311,26 +323,46 @@ input:focus {
   vertical-align: top; }
 
 .ghoul-checkbox {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 10px solid #000000;
+  border: 7.5px solid transparent;
   border-radius: 420px;
   display: block;
-  filter: grayscale(100%) contrast(110%);
   overflow: hidden;
   position: relative;
+  transition: 0.15s ease-in-out border-color;
   width: 100%; }
   .ghoul-checkbox:before {
     content: '';
     display: block;
+    overflow: hidden;
     padding-top: 100%; }
   .ghoul-checkbox:hover,
   .ghoul-selected .ghoul-checkbox,
   .ghoul-focused .ghoul-checkbox {
-    border-color: #B0E272;
-    filter: none;
+    border: 7.5px solid #B0E272;
     outline: none; }
+    .ghoul-checkbox:hover .ghoul-image,
+    .ghoul-selected .ghoul-checkbox .ghoul-image,
+    .ghoul-focused .ghoul-checkbox .ghoul-image {
+      filter: none;
+      height: 105%;
+      left: -2.5%;
+      top: -2.5%;
+      width: 105%; }
+
+.ghoul-image {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 420px;
+  display: block;
+  height: 100%;
+  filter: grayscale(100%) contrast(150%);
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: 0.35s ease-in-out all;
+  width: 100%; }
 
 .ghoul-checkbox-input {
   left: -100px;

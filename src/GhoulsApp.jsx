@@ -67,7 +67,7 @@ class GhoulsApp extends Component {
 
 					<Results
 						path="/results"
-						next="/results-dark"
+						next="/users"
 						styles="users"
 						keyboard
 						inert

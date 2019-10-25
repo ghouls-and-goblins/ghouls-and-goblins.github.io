@@ -1,6 +1,6 @@
-.ghoul-animation.is-hidden {
+* .ghoul-selector.is-hidden {
   transform: translate(0, 0);
   opacity: 1; }
 
-.ghoul-animation.is-shown {
+* .ghoul-selector.is-shown {
   transition: 0; }

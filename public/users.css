@@ -314,9 +314,9 @@ input:focus {
 .ghouls-modal-heading {
   font-size: 2.4em; }
 
-.ghouls-results {
+.ghouls-results-list {
   margin: 0 auto;
-  max-width: 48em;
+  max-width: 42em;
   padding: 0;
   width: 100%; }
 
@@ -327,17 +327,17 @@ input:focus {
   width: 100%; }
 
 .ghouls-results-img-container {
-  border-radius: 250px;
+  border-radius: 150px;
   display: block;
-  height: 250px;
+  height: 150px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  width: 250px; }
+  width: 150px; }
 
 .ghouls-result-img {
   display: block;
-  height: 300px;
+  height: 200px;
   left: 50%;
   max-width: none;
   position: absolute;
@@ -372,10 +372,18 @@ input:focus {
 .ghoul-selector {
   box-sizing: border-box;
   display: inline-block;
+  left: 0;
   margin: 0 auto 2.25em;
   padding: 0 1em;
   width: 50%;
   vertical-align: top; }
+
+.ghoul-animation.is-hidden {
+  opacity: 0;
+  transform: translate(-200px, -200px); }
+
+.ghoul-animation.is-shown {
+  transition: .5s; }
 
 .ghoul-checkbox {
   border: 7.5px solid transparent;
@@ -647,8 +655,11 @@ h3 {
     --footerLinkHover: #FFFFFF; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .ghoul-animation {
-    animation: 0; } }
+  .ghoul-animation.is-hidden {
+    transform: translate(0, 0);
+    opacity: 1; }
+  .ghoul-animation.is-shown {
+    transition: 0; } }
 
 body {
   background-color: var(--bodyBg);

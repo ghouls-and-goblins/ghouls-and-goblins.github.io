@@ -378,12 +378,13 @@ input:focus {
   width: 50%;
   vertical-align: top; }
 
-.ghoul-animation.is-hidden {
-  opacity: 0;
-  transform: translate(-200px, -200px); }
-
-.ghoul-animation.is-shown {
+.ghoul-animation {
   transition: .5s; }
+  .ghoul-animation.is-hidden {
+    opacity: 0;
+    transform: translate(-200px, -200px); }
+  .ghoul-animation.is-shown {
+    transform: translate(0, 0); }
 
 .ghoul-checkbox {
   border: 7.5px solid transparent;

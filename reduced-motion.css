@@ -1,6 +1,8 @@
-.ghoul-animation.is-hidden {
-  transform: translate(0, 0);
-  opacity: 1; }
-
-.ghoul-animation.is-shown {
+.ghoul-animation {
+  opacity: 1;
   transition: 0; }
+  .ghoul-animation.is-shown {
+    transform: translate(0, 0); }
+  .ghoul-animation.is-hidden {
+    transform: translate(0, 0);
+    opacity: 1; }

@@ -17,6 +17,7 @@
 	}
 
 	&.is-shown {
+		transition: .5s ease-in-out all;
 		transform: translate(0, 0);
 	}
 }

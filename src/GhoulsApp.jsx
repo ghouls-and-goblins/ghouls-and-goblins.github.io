@@ -50,8 +50,18 @@ class GhoulsApp extends Component {
 					/>
 
 					<Home
+						exact
 						path="/high-contrast-light"
-						next="/users"
+						next="/high-contrast-light?reduced-motion=true"
+						styles="hc-light"
+						keyboard
+						inert
+					/>
+
+					<Home
+						exact
+						path="/high-contrast-light?reduced-motion=true"
+						next="/users?"
 						styles="hc-light"
 						keyboard
 						inert

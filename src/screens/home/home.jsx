@@ -4,6 +4,7 @@ import AccessibleSelector from "../../components/selections/accesibleSelection";
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import { Helmet } from 'react-helmet';
+import { Link } from '@reach/router';
 import LoginModal from '../../components/modal/loginModal';
 import { NOMINEE_DATA } from '../../data/nominees';
 import PropTypes from 'prop-types';
@@ -108,26 +109,24 @@ class Home extends Component {
 		});
 	}
 
-    submitData = () => {
-        const { selections, errorModalVisible } = this.state;
-        console.log(selections, errorModalVisible);
-
-        // if (selections.length) {
-        //     return this.props.push('/results');
-        // }
-        //
-        // this.setState({ errorModalVisible: !errorModalVisible });
-    }
-
     renderButton = () => {
         const { isAuthenticated } = this.state;
-        const buttonAction = isAuthenticated ? this.submitData : this.toggleLoginModal;
+
+		if (isAuthenticated) {
+            return (
+				<Link
+	                className="ghouls-button"
+	                to="/results">
+	                { this.getButtonText() }
+	            </Link>
+			);
+		}
 
         return (
             <button
                 type="button"
                 className="ghouls-button"
-                onClick={ buttonAction }>
+                onClick={ this.toggleLoginModal }>
                 { this.getButtonText() }
             </button>
         );

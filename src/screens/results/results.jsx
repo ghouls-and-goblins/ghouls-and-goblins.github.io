@@ -4,11 +4,38 @@ import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
+import Result from '../../components/result/result';
 import { NOMINEE_DATA } from '../../data/nominees'
 
 class Results extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			werewolfBarMitzVah: false
+		};
+	}
+
+	sortedResults = () => NOMINEE_DATA.sort((NOM1, NOM2) => NOM2.votes - NOM1.votes);
+
 	renderResults = () => {
-		console.log(NOMINEE_DATA);
+		const sortedResults = this.sortedResults();
+		const totalVotes = sortedResults.reduce((prev, res) => (
+			prev + res.votes
+		), 0);
+
+		return (
+			<ol className="ghouls-results-list">
+				{ sortedResults.map((result) => (
+					<Result data={ result } totalVotes={ totalVotes } key={ `vote-tally-${result.id}`} />
+				)) }
+			</ol>
+		);
+	}
+
+	werewolfBarMitzVah = () => {
+		const { werewolfBarMitzVah } = this.state;
+
+		this.setState({ werewolfBarMitzVah: !werewolfBarMitzVah });
 	}
 
     render() {
@@ -26,11 +53,16 @@ class Results extends Component {
 					<Header logoLink={next} />
 
 					<section className="ghouls-content">
-						<h2 className="ghouls-heading"><FormattedMessage id="resultsTitle" /></h2>
+						<header className="ghouls-section-header">
+							<h2 className="ghouls-heading ghouls-section-heading">
+								<FormattedMessage id="resultsTitle" />
+							</h2>
+						</header>
+
 						{ this.renderResults() }
 					</section>
 
-					<Footer />
+					<Footer spookyScary={ this.werewolfBarMitzVah }  />
 	            </main>
 			</>
         );

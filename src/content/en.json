@@ -37,5 +37,7 @@
 
     "submitVotes": "Submit My Vote",
 
-    "theLab": "Dr. Frankenstein's Laboratory of Technology"
+    "theLab": "Dr. Frankenstein's Laboratory of Technology",
+
+	"voteCount": "{count} of {total} votes!"
 }

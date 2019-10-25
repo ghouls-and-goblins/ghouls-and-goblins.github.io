@@ -1,0 +1,124 @@
+@import '../variables';
+
+$bodyBg: $lightGreyAccessible;
+$bodyText: $green;
+$bodyFont: $slab;
+$linkColor: $green;
+$linkFocus: $lightGreen;
+
+$focusColor: $lightGreen;
+$focusOutline: $lightGreen;
+$headerOutline: $darkGreen;
+$footerOutline: $lightGreen;
+
+$nomineeBorder: $bodyBg;
+$nomineeFocus: $lightGreen;
+
+$headerBG: rgba($darkGreen, 0.8);
+$headerText: $lightGreen;
+$headerLink: $lightGreen;
+
+$footerBG: $black;
+$footerText: $lightGreen;
+$footerLink: $lightGreen;
+$footerLinkHover: $white;
+
+@import '../imports';
+@import '../features/contrast';
+
+@import '../features/light-mode';
+@import '../features/dark-mode';
+@import '../features/hc-light-mode';
+@import '../features/hc-dark-mode';
+
+@media (prefers-reduced-motion: reduce) {
+	@import 'reduced-motion';
+}
+
+body {
+    background-color: var(--bodyBg);
+    color: var(--bodyText);
+	font-family: var(--bodyFont);
+}
+
+.ghouls-castle-bg {
+    background-color: var(--bodyBg);
+}
+
+.ghouls-link {
+    color: var(--linkColor);
+
+    &:hover,
+    &:focus {
+        color: var(--linkFocus);
+    }
+}
+
+.ghouls-section-heading {
+	font-family: var(--bodyFont);
+}
+
+.ghouls-button {
+    background-color: var(--bodyBg);
+    border: 2px solid var(--bodyText);
+    color: var(--bodyText);
+
+    &:hover,
+    &:focus {
+        background-color: var(--bodyText);
+        color: var(--bodyBg);
+    }
+}
+
+a:focus,
+button:focus,
+input:focus {
+	outline: 2px solid var(--focusColor);
+}
+
+.ghouls-footer {
+    background-color: var(--footerBG);
+    color: var(--footerText);
+
+	&:after {
+		background-color: var(--footerBG);
+	}
+}
+
+.ghouls-emoji {
+	background: var(--transparent);
+
+	&:focus {
+		outline: 2px solid var(--footerOutline);
+	}
+}
+
+.ghouls-footer-link {
+    color: var(--footerLink);
+
+    &:hover,
+    &:focus {
+        color: var(--footerLinkHover);
+    }
+}
+
+.ghouls-header {
+	background-color: var(--headerBG);
+    color: var(--headerText);
+	.ghouls-link {
+        color: var(--headerLink);
+    }
+}
+
+.ghouls-modal {
+	background-color: var(--bodyBg);
+	border: 2px solid var(--bodyText);
+}
+
+.ghoul-checkbox {
+	&:hover,
+	.ghoul-selected &,
+	.ghoul-focused & {
+		border: 7.5px solid var(--nomineeFocus);
+	}
+}

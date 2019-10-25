@@ -8,44 +8,59 @@ class GhoulsApp extends Component {
 		return (
 			<div className="ghouls-app">
 				<Router>
-					<Home exact path="/" next="/home" styles="ghouls--1" />
-					<Home path="/home" next="/contrast" styles="ghouls--1" />
+					<Home exact path="/" next="/home" styles="default" />
+
+					<Home path="/home" next="/contrast" styles="default" />
+
 					<Home
 						path="/contrast"
 						next="/keyboard"
-						styles="ghouls--contrast"
+						styles="contrast"
 					/>
+
 					<Home
 						path="/keyboard"
 						next="/inert"
-						styles="ghouls--keyboard"
+						styles="keyboard"
 						keyboard
 					/>
+
 					<Home
 						path="/inert"
 						next="/dark"
-						styles="ghouls--keyboard"
+						styles="keyboard"
 						keyboard
 						inert
 					/>
+
 					<Home
 						path="/dark"
 						next="/high-contrast"
-						styles="ghouls--dark"
+						styles="dark"
 						keyboard
 						inert
 					/>
+
 					<Home
 						path="/high-contrast"
 						next="/high-contrast-light"
-						styles="ghouls--high-contrast-dark"
+						styles="hc-dark"
 						keyboard
 						inert
 					/>
+
 					<Home
 						path="/high-contrast-light"
+						next="/users"
+						styles="hc-light"
+						keyboard
+						inert
+					/>
+
+					<Home
+						path="/users"
 						next="/results"
-						styles="ghouls--high-contrast-light"
+						styles="users"
 						keyboard
 						inert
 					/>
@@ -53,28 +68,7 @@ class GhoulsApp extends Component {
 					<Results
 						path="/results"
 						next="/results-dark"
-						styles="ghouls--keyboard"
-						keyboard
-						inert
-					/>
-					<Results
-						path="/results-dark"
-						next="/results-high-contrast"
-						styles="ghouls--dark"
-						keyboard
-						inert
-					/>
-					<Results
-						path="/results-high-contrast"
-						next="/results-high-contrast-light"
-						styles="ghouls--high-contrast-dark"
-						keyboard
-						inert
-					/>
-					<Results
-						path="/results-high-contrast-light"
-						next="/home"
-						styles="ghouls--high-contrast-light"
+						styles="users"
 						keyboard
 						inert
 					/>

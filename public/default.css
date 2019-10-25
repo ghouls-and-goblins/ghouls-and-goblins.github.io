@@ -1,10 +1,10 @@
 body {
-  background-color: #F5F5F5;
+  background-color: #E9E9E9;
   color: #5E793D;
-  font-family: "Arbutus Slab", serif; }
+  font-family: "Creepster", cursive; }
 
 .ghouls-castle-bg {
-  background: #F5F5F5 url("/assets/img/castle.jpg") no-repeat 50% 50%;
+  background: #E9E9E9 url("/assets/img/castle.jpg") no-repeat 50% 50%;
   background-size: cover;
   bottom: 0;
   left: 0;
@@ -33,10 +33,10 @@ body {
   text-align: center; }
 
 .ghouls-link {
-  color: #5E793D;
+  color: #000000;
   transition: 0.35s ease color; }
   .ghouls-link:hover, .ghouls-link:focus {
-    color: #B0E272; }
+    color: #000000; }
 
 .ghouls-heading {
   margin-bottom: 1em; }
@@ -47,7 +47,7 @@ body {
   width: 100%; }
 
 .ghouls-section-heading {
-  font-family: "Arbutus Slab", serif;
+  font-family: "Creepster", cursive;
   font-size: 2.2em;
   margin-bottom: 1.4em;
   text-align: center;
@@ -74,7 +74,7 @@ body {
   width: 100%; }
 
 .ghouls-button {
-  background-color: #F5F5F5;
+  background-color: #E9E9E9;
   border: 2px solid #5E793D;
   border-radius: 6px;
   color: #5E793D;
@@ -87,7 +87,7 @@ body {
   width: auto; }
   .ghouls-button:hover, .ghouls-button:focus {
     background-color: #5E793D;
-    color: #F5F5F5; }
+    color: #E9E9E9; }
 
 .ghouls-nominee-list {
   margin: 0 -40px 2em;
@@ -108,7 +108,7 @@ body {
 a:focus,
 button:focus,
 input:focus {
-  outline: 2px solid #B0E272; }
+  outline: 2px solid transparent; }
 
 @media screen and (min-width: 36em) {
   .ghouls-nominee-list {
@@ -133,7 +133,7 @@ input:focus {
 .ghouls-footer {
   background-color: #000000;
   bottom: 0;
-  color: #B0E272;
+  color: #5E793D;
   left: 0;
   margin-top: 2em;
   padding: 1em 0.375em;
@@ -171,13 +171,13 @@ input:focus {
   margin: 0 3px;
   vertical-align: middle; }
   .ghouls-emoji:focus {
-    outline: 2px solid #B0E272; }
+    outline: 2px solid transparent; }
 
 .ghouls-footer-link {
-  color: #B0E272;
+  color: #5E793D;
   transition: 0.35s ease color; }
   .ghouls-footer-link:hover, .ghouls-footer-link:focus {
-    color: #FFFFFF; }
+    color: #B0E272; }
 
 .ghouls-secret-trigger {
   bottom: 25px;
@@ -277,7 +277,7 @@ input:focus {
   visibility: visible; }
 
 .ghouls-modal-bg {
-  background-color: rgba(245, 245, 245, 0.6);
+  background-color: rgba(0, 0, 0, 0.75);
   bottom: 0;
   font-size: 0;
   left: 0;
@@ -289,7 +289,7 @@ input:focus {
   z-index: 15; }
 
 .ghouls-modal {
-  background-color: #F5F5F5;
+  background-color: #E9E9E9;
   border: 2px solid #5E793D;
   border-radius: 3px;
   left: 50%;
@@ -394,20 +394,4 @@ input:focus {
     width: 20%; } }
 
 body {
-  font-weight: normal;
-  font-size: 1em; }
-
-h1 {
-  font-family: "Creepster", cursive;
-  font-weight: bold;
-  font-size: 1.6em; }
-
-h2,
-h3 {
-  font-family: "Creepster", cursive;
-  font-weight: bold;
-  font-size: 1.4em; }
-
-.ghouls-secret-trigger:focus {
-  left: 50%;
-  transform: translateX(-50%); }
+  font-weight: bold; }

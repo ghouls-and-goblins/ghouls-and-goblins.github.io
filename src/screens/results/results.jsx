@@ -15,6 +15,17 @@ class Results extends Component {
 		};
 	}
 
+	componentDidMount() {
+		let selectors = document.querySelectorAll(".ghoul-animation.is-hidden");
+
+		for (let i = 0; i < selectors.length; i++) {
+			setTimeout(function() {
+				selectors[i].classList.remove("is-hidden");
+				selectors[i].classList.add("is-shown");
+			}, 150 * i + 1);
+		}
+	}
+
 	sortedResults = () => NOMINEE_DATA.sort((NOM1, NOM2) => NOM2.votes - NOM1.votes);
 
 	renderResults = () => {

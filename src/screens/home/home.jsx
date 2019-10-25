@@ -26,7 +26,8 @@ class Home extends Component {
 	}
 
 	componentDidMount() {
-		let selectors = document.querySelectorAll(".ghoul-selector.is-hidden");
+		let selectors = document.querySelectorAll(".ghoul-animation.is-hidden");
+
 		for (let i = 0; i < selectors.length; i++) {
 			setTimeout(function() {
 				selectors[i].classList.remove("is-hidden");

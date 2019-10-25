@@ -1,6 +1,6 @@
-.ghouls-results {
+.ghouls-results-list {
 	margin: 0 auto;
-	max-width: 48em;
+	max-width: 42em;
 	padding: 0;
 	width: 100%;
 }
@@ -13,18 +13,18 @@
 }
 
 .ghouls-results-img-container {
-	border-radius: 250px;
+	border-radius: 150px;
 	display: block;
-	height: 250px;
+	height: 150px;
 	margin: 0 auto;
 	overflow: hidden;
 	position: relative;
-	width: 250px;
+	width: 150px;
 }
 
 .ghouls-result-img {
 	display: block;
-	height: 300px;
+	height: 200px;
 	left: 50%;
 	max-width: none;
 	position: absolute;

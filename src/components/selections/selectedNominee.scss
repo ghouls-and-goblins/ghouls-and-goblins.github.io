@@ -1,21 +1,19 @@
 .ghoul-selector {
 	box-sizing: border-box;
 	display: inline-block;
+	left: 0;
 	margin: 0 auto 2.25em;
 	padding: 0 1em;
 	width: 50%;
 	vertical-align: top;
-	left: 0;
-
-
 }
 
-.ghoul-selector.is-hidden{
-	transform: translate(-400px,-200px);
+.ghoul-animation.is-hidden{
 	opacity: 0;
+	transform: translate(-200px,-200px);
 
 }
-.ghoul-selector.is-shown{
+.ghoul-animation.is-shown{
 	transition: .5s;
 }
 

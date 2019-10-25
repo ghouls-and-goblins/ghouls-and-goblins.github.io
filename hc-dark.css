@@ -365,8 +365,12 @@ input:focus {
   width: 100%; }
 
 .ghoul-checkbox-input {
-  left: -100px;
-  position: absolute; }
+  background: transparent;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
 
 .ghoul-name {
   font-size: 1.4em;

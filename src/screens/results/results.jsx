@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import Result from '../../components/result/result';
 import { NOMINEE_DATA } from '../../data/nominees'
+import { withRouter } from 'react-router-dom';
 
 class Results extends Component {
 	constructor(props) {
@@ -85,4 +86,4 @@ Results.propTypes = {
 	styles: PropTypes.string.isRequired
 };
 
-export default injectIntl(Results);
+export default withRouter(injectIntl(Results));

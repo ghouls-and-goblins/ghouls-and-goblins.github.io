@@ -1,6 +1,6 @@
 import { FormattedMessage, injectIntl } from "react-intl";
 import React, { Component } from "react";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
 	getSwapiText = () => <FormattedMessage id="swapi" />;

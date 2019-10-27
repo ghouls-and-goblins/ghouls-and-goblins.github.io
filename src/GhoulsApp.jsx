@@ -1,5 +1,5 @@
+import { HashRouter, Route } from "react-router-dom";
 import React, { Component } from 'react';
-import { Router } from '@reach/router';
 import Home from './screens/home/home';
 import Results from './screens/results/results';
 
@@ -7,82 +7,51 @@ class GhoulsApp extends Component {
 	render() {
 		return (
 			<div className="ghouls-app">
-				<Router>
-					<Home exact path="/" next="/home" styles="default" />
+				<HashRouter basename='/'>
+					<Route exact path="/" component={() =>
+						<Home next="/results" styles="users" />
+					} />
 
-					<Home path="/home" next="/contrast" styles="default" />
+					<Route path="/home" component={() =>
+						<Home next="/contrast" styles="default" />
+					} />
 
-					<Home
-						path="/contrast"
-						next="/keyboard"
-						styles="contrast"
-					/>
+					<Route path="/contrast" component={() =>
+						<Home next="/keyboard" styles="contrast" />
+					} />
 
-					<Home
-						path="/keyboard"
-						next="/inert"
-						styles="keyboard"
-						keyboard
-					/>
+					<Route path="/keyboard" component={() =>
+						<Home next="/inert" styles="keyboard" keyboard />
+					} />
 
-					<Home
-						path="/inert"
-						next="/dark"
-						styles="keyboard"
-						keyboard
-						inert
-					/>
+					<Route path="/inert" component={() =>
+						<Home next="/dark" styles="keyboard" keyboard inert />
+					} />
 
-					<Home
-						path="/dark"
-						next="/high-contrast"
-						styles="dark"
-						keyboard
-						inert
-					/>
+					<Route path="/dark" component={() =>
+						<Home next="/high-contrast" styles="dark" keyboard inert />
+					} />
 
-					<Home
-						path="/high-contrast"
-						next="/high-contrast-light"
-						styles="hc-dark"
-						keyboard
-						inert
-					/>
+					<Route path="/high-contrast" component={() =>
+						<Home next="/high-contrast-light" styles="hc-dark" keyboard inert />
+					} />
 
-					<Home
-						exact
-						path="/high-contrast-light"
-						next="/high-contrast-light?reduced-motion=true"
-						styles="hc-light"
-						keyboard
-						inert
-					/>
+					<Route exact path="/high-contrast-light" component={() =>
+						<Home next="/high-contrast-light?reduced-motion=true" styles="hc-light" keyboard inert />
+					} />
 
-					<Home
-						exact
-						path="/high-contrast-light?reduced-motion=true"
-						next="/users?"
-						styles="hc-light"
-						keyboard
-						inert
-					/>
+					<Route exact path="/high-contrast-light?reduced-motion=true" component={() =>
+						<Home next="/high-contrast-light?reduced-motion=true" styles="hc-light" keyboard inert />
+					} />
 
-					<Home
-						path="/users"
-						next="/results"
-						styles="users"
-						keyboard
-						inert
-					/>
+					<Route path="/users" component={() =>
+						<Home next="/results" styles="users" keyboard inert />
+					} />
 
-					<Results
-						path="/results"
-						next="/users"
-						styles="users"
-						keyboard
-						inert
-					/>
-				</Router>
+					<Route path="/results" component={() =>
+						<Results next="/users" styles="users" keyboard inert />
+					} />
+				</HashRouter>
 			</div>
 		);
 	}

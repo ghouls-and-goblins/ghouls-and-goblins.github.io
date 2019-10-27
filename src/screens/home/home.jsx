@@ -4,13 +4,14 @@ import AccessibleSelector from "../../components/selections/accesibleSelection";
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import { Helmet } from 'react-helmet';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 import LoginModal from '../../components/modal/loginModal';
 import { NOMINEE_DATA } from '../../data/nominees';
 import PropTypes from 'prop-types';
 import Selector from "../../components/selections/selectedNominee";
 import SpookyScary from "../../components/modal/spookyScary";
 import { setRef } from "../../utils/setRef";
+import { withRouter } from 'react-router-dom';
 
 class Home extends Component {
 	constructor(props) {
@@ -271,4 +272,4 @@ Home.propTypes = {
 	styles: PropTypes.string.isRequired
 };
 
-export default injectIntl(Home);
+export default withRouter(injectIntl(Home));

@@ -25,3 +25,11 @@ $footerLinkHover: $white;
 
 @import '../imports';
 @import '../features/contrast';
+
+.ghouls-logo {
+	filter: invert(100%);
+}
+
+.ghouls-header:after {
+	opacity: 0.05;
+}

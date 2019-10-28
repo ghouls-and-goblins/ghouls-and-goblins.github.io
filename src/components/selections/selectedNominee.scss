@@ -1,3 +1,9 @@
+.ghouls-nominee-list {
+	margin: 0 -40px 2em;
+	padding: 0;
+	text-align: center;
+}
+
 .ghoul-selector {
 	box-sizing: border-box;
 	display: inline-block;
@@ -9,7 +15,9 @@
 }
 
 .ghoul-animation {
-	transition: .5s;
+	opacity: 1;
+	transform: translate(0, 0);
+	transition: .5s ease-in-out transform, .5s ease-in-out opacity;
 
 	&.is-hidden {
 		opacity: 0;
@@ -17,12 +25,13 @@
 	}
 
 	&.is-shown {
-		transition: .5s ease-in-out all;
+		opacity: 1;
 		transform: translate(0, 0);
 	}
 }
 
 .ghoul-checkbox {
+	background: $transparent;
 	border: 7.5px solid $transparent;
 	border-radius: 420px;
 	display: block;
@@ -30,6 +39,7 @@
 	position: relative;
 	transition: 0.15s ease-in-out border-color;
 	width: 100%;
+	z-index: 10;
 
 	&:before {
 		content: '';
@@ -46,10 +56,7 @@
 
 		.ghoul-image {
 			filter: none;
-			height: 105%;
-			left: -2.5%;
-			top: -2.5%;
-			width: 105%;
+			transform: scale(1.1);
 		}
 	}
 }
@@ -66,8 +73,10 @@
 	overflow: hidden;
 	position: absolute;
 	top: 0;
-	transition: 0.35s ease-in-out all;
+	transform-origin: center;
+	transition: 0.35s ease-in-out transform, 0.35s ease-in-out filter;
 	width: 100%;
+	z-index: -1;
 }
 
 .ghoul-checkbox-input {

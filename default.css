@@ -89,10 +89,8 @@ body {
     background-color: #5E793D;
     color: #E9E9E9; }
 
-.ghouls-nominee-list {
-  margin: 0 -40px 2em;
-  padding: 0;
-  text-align: center; }
+.ghouls-list-fade {
+  animation: .6s ease-out fadeIn; }
 
 .ghouls-label {
   display: block;
@@ -109,6 +107,14 @@ a:focus,
 button:focus,
 input:focus {
   outline: 2px solid transparent; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 @media screen and (min-width: 36em) {
   .ghouls-nominee-list {
@@ -211,21 +217,6 @@ input:focus {
   position: relative;
   width: auto;
   z-index: 5; }
-  .ghouls-link:after {
-    color: #000000;
-    content: 'G&G';
-    display: inline-block;
-    font-family: "Creepster", cursive;
-    font-size: 30px;
-    left: 50%;
-    position: absolute;
-    top: 22px;
-    transform: translateX(-50%) rotate(-5deg); }
-  .ghouls-link:focus, .ghouls-link:hover {
-    filter: brightness(75%); }
-    .ghouls-link:focus:after, .ghouls-link:hover:after {
-      color: #B0E272;
-      filter: brightness(100%); }
 
 .ghouls-title {
   font-size: 2em; }
@@ -246,14 +237,10 @@ input:focus {
 
 @media screen and (min-width: 36em) {
   .ghouls-link {
-    margin-left: 0;
-    margin-top: -45px; }
-    .ghouls-link:after {
-      font-size: 46px;
-      top: 42px; }
+    margin-left: 0; }
   .ghouls-logo {
     display: block;
-    height: 145px;
+    height: 80px;
     max-width: none; }
   .ghouls-description {
     font-size: 3.375em;
@@ -369,6 +356,11 @@ input:focus {
     margin-left: auto;
     text-align: right; } }
 
+.ghouls-nominee-list {
+  margin: 0 -40px 2em;
+  padding: 0;
+  text-align: center; }
+
 .ghoul-selector {
   box-sizing: border-box;
   display: inline-block;
@@ -379,22 +371,26 @@ input:focus {
   vertical-align: top; }
 
 .ghoul-animation {
-  transition: .5s; }
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: .5s ease-in-out transform, .5s ease-in-out opacity; }
   .ghoul-animation.is-hidden {
     opacity: 0;
     transform: translate(-200px, -200px); }
   .ghoul-animation.is-shown {
-    transition: .5s ease-in-out all;
+    opacity: 1;
     transform: translate(0, 0); }
 
 .ghoul-checkbox {
+  background: transparent;
   border: 7.5px solid transparent;
   border-radius: 420px;
   display: block;
   overflow: hidden;
   position: relative;
   transition: 0.15s ease-in-out border-color;
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
   .ghoul-checkbox:before {
     content: '';
     display: block;
@@ -409,10 +405,7 @@ input:focus {
     .ghoul-selected .ghoul-checkbox .ghoul-image,
     .ghoul-focused .ghoul-checkbox .ghoul-image {
       filter: none;
-      height: 105%;
-      left: -2.5%;
-      top: -2.5%;
-      width: 105%; }
+      transform: scale(1.1); }
 
 .ghoul-image {
   background-position: 50%;
@@ -426,8 +419,10 @@ input:focus {
   overflow: hidden;
   position: absolute;
   top: 0;
-  transition: 0.35s ease-in-out all;
-  width: 100%; }
+  transform-origin: center;
+  transition: 0.35s ease-in-out transform, 0.35s ease-in-out filter;
+  width: 100%;
+  z-index: -1; }
 
 .ghoul-checkbox-input {
   background: transparent;

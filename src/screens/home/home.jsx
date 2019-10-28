@@ -245,11 +245,14 @@ class Home extends Component {
 
 						{this.renderNominees()}
 
-						{keyboard && (
-							<div className="ghouls-button-row">
-								{this.renderButton()}
-							</div>
-						)}
+						<div className="ghouls-section-header ghouls-selections">
+							{/* this.renderSelections() */}
+							{keyboard && (
+								<div className="ghouls-button-row">
+									{this.renderButton()}
+								</div>
+							)}
+						</div>
 					</section>
 
 					<Footer spookyScary={this.werewolfBarMitzVah} />

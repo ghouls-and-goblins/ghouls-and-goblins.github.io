@@ -41,7 +41,7 @@ class GhoulsApp extends Component {
 					} />
 
 					<Route exact path="/high-contrast-light?reduced-motion=true" component={() =>
-						<Home next="/high-contrast-light?reduced-motion=true" styles="hc-light" keyboard inert />
+						<Home next="/users?" styles="hc-light" keyboard inert />
 					} />
 
 					<Route path="/users" component={() =>

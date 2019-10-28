@@ -299,7 +299,8 @@ input:focus {
     font-weight: bold; }
 
 .ghouls-modal-heading {
-  font-size: 2.4em; }
+  font-size: 2.4em;
+  margin-bottom: 2em; }
 
 .ghouls-results-list {
   margin: 0 auto;

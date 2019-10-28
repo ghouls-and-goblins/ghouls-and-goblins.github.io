@@ -1,7 +1,7 @@
 body {
   background-color: #E9E9E9;
   color: #5E793D;
-  font-family: "Creepster", cursive; }
+  font-family: "Arbutus Slab", serif; }
 
 .ghouls-castle-bg {
   background: #E9E9E9 url("/assets/img/castle.jpg") no-repeat 50% 50%;
@@ -47,7 +47,7 @@ body {
   width: 100%; }
 
 .ghouls-section-heading {
-  font-family: "Creepster", cursive;
+  font-family: "Arbutus Slab", serif;
   font-size: 2.2em;
   margin-bottom: 1.4em;
   text-align: center;
@@ -299,7 +299,8 @@ input:focus {
     font-weight: bold; }
 
 .ghouls-modal-heading {
-  font-size: 2.4em; }
+  font-size: 2.4em;
+  margin-bottom: 2em; }
 
 .ghouls-results-list {
   margin: 0 auto;

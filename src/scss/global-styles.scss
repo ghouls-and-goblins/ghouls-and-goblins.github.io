@@ -109,10 +109,8 @@ body {
     }
 }
 
-.ghouls-nominee-list {
-	margin: 0 -40px 2em;
-	padding: 0;
-	text-align: center;
+.ghouls-list-fade {
+    animation: .6s ease-out fadeIn;
 }
 
 .ghouls-label {
@@ -132,6 +130,18 @@ a:focus,
 button:focus,
 input:focus {
 	outline: 2px solid $focusColor;
+}
+
+@keyframes fadeIn {
+	0%{
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @media screen and (min-width: 36em) {

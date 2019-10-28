@@ -42,28 +42,6 @@
 	position: relative;
 	width: auto;
 	z-index: 5;
-
-	&:after {
-		color: $black;
-		content: 'G&G';
-		display: inline-block;
-		font-family: $cursive;
-		font-size: 30px;
-		left: 50%;
-	    position: absolute;
-	    top: 22px;
-	    transform: translateX(-50%) rotate(-5deg);
-	}
-
-	&:focus,
-	&:hover {
-		filter: brightness(75%);
-
-		&:after {
-			color: $lightGreen;
-			filter: brightness(100%);
-		}
-	}
 }
 
 .ghouls-title {
@@ -89,17 +67,11 @@
 @media screen and (min-width: 36em) {
 	.ghouls-link {
 		margin-left: 0;
-		margin-top: -45px;
-
-		&:after {
-			font-size: 46px;
-		    top: 42px;
-		}
 	}
 
 	.ghouls-logo {
 		display: block;
-		height: 145px;
+		height: 80px;
 		max-width: none;
 	}
 

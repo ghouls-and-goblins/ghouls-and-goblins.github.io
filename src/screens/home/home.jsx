@@ -34,7 +34,7 @@ class Home extends Component {
 
 			setTimeout(function() {
 				selectors[i].classList.remove('is-hidden');
-				selectors[i].classList.remove('is-shown');
+				selectors[i].classList.add('is-shown');
 			}, 150 * i + 1);
 		}
 	}
@@ -66,7 +66,7 @@ class Home extends Component {
 		const { selections } = this.state;
 
 		return (
-			<ul className="ghouls-nominee-list">
+			<ul className="ghouls-nominee-list ghouls-list-fade">
 				{NOMINEE_DATA.map((monster) => {
 					const monsterId = monster.id;
 

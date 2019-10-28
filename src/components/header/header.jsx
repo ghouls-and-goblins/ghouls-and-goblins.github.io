@@ -3,8 +3,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class Header extends Component {
-	getSwapiText = () => <FormattedMessage id="swapi" />;
-
 	render() {
 		const { logoLink } = this.props;
 		return (
@@ -16,7 +14,7 @@ class Header extends Component {
 						</h1>
 						<Link to={logoLink} className="ghouls-link">
 							<img
-								src="/assets/img/tombstone.svg"
+								src="/assets/img/famous-monsters.png"
 								className="ghouls-logo"
 								alt=""
 								aria-hidden="true"
